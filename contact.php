@@ -44,16 +44,33 @@
                 </div>
                 <div class="form">
                     <?php
-                        echo "<form>";
+                        echo "<form method=\"POST\">";
                             echo "<label for=\"nombre\">Nombre:</label><br>";
-                            echo "<input type=\"text\" name=\"nombre\" id=\"nombre\" placeholder= \"Introduzca su nombre\" /><br>";
+                            echo "<input type=\"text\" name=\"nombre\" id=\"nombre\" placeholder= \"Introduzca su nombre\" required=\" \"/><br>";
                             echo "<label for=\"mail\">Correo Electrónico:</label><br>";
-                            echo "<input type=\"email\" name=\"mail\" id=\"mail\" placeholder=\"Introduzca su correo eléctronico\"/><br>";
+                            echo "<input type=\"email\" name=\"mail\" id=\"mail\" placeholder=\"Introduzca su correo eléctronico\" required=\" \"/><br>";
                             echo "<label for=\"description\">¿Qué nos quieres decir?</label><br>";
-                            echo "<input type=\"text\" name=\"description\" id=\"description\" placeholder=\"Escríbenos tu comentario\"/><br>";
+                            echo "<input type=\"text\" name=\"description\" id=\"description\" placeholder=\"Escríbenos tu comentario\" required=\" \"/><br>";
                             echo "<input type=\"submit\" value=\"Envíanos tus comentarios\" class=\"button\"/>";
                             echo "";
                         echo "</form>";
+
+                        //Envío de datos
+
+                        $cliente = $_POST["nombre"];
+                        $correo = $_POST["mail"];
+                        $mensaje = $_POST["description"];
+                        $destino = "alemau97@gmail.com";
+
+                        $contacto = "Nombre del cliente: " .$cliente. "\nCorreo: " .$correo. "\nMensaje: " .$mensaje. "<br>";
+                        
+                        if(mail($destino, "Contacto cliente", $contacto)){
+                            echo "<br> El mensaje fue enviado con éxito";
+                        }
+                        else{
+                            echo "<br>No se pudo enviar el mensaje";
+                        }
+
                     ?>     
                 </div>
             </div>
