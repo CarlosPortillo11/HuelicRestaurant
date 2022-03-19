@@ -60,12 +60,17 @@
                         $cliente = $_POST["nombre"];
                         $correo = $_POST["mail"];
                         $mensaje = $_POST["description"];
-                        $destino = "alemau97@gmail.com";
+                        $destino = "LISHuelic@gmail.com";
+                        $subject = "Contacto Cliente";
+                        $headers = 'From: Clientes Restaurante' . "\r\n" .
+                                    'Reply-to: Clientes Restaurante' . "\r\n" .
+                                    'X-Mailer: PHP/' . phpversion();
 
+    
                         $contacto = "Nombre del cliente: " .$cliente. "\nCorreo: " .$correo. "\nMensaje: " .$mensaje. "<br>";
                         
-                        if(mail($destino, "Contacto cliente", $contacto)){
-                            echo "<br> El mensaje fue enviado con éxito";
+                        if(mail($destino, $subject, $contacto, $headers)){
+                            echo "<br> Gracias por por ponerte en contacto con nostros, tu mensaje ha sido enviado con éxito";
                         }
                         else{
                             echo "<br>No se pudo enviar el mensaje";
