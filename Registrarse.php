@@ -5,10 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/Login.css">
+    <link rel="stylesheet" href="css/registrarse.css">
     <link rel="stylesheet" href="css/slick.css">
     <script src="https://cdn.tailwindcss.com"></script>
-    <title>Login Huelic Restaurant</title>
+    <title>Registrarse Huelic Restaurant</title>
 </head>
 <body>
 <div class="contain">
@@ -37,20 +37,18 @@
             </nav>
         </header>
 
-        <section class="min-h-screen flex items-center flex-col justify-center">
-            <div class="bg-white mx-auto max-w-500 py-10 px-40 shadow rounded-lg border border-amber-900 border-4">
-                <div class="mb-1">
-                    </div>
-                    <div class="flex content-center justify-center">
-                       <img src="resources\images/huelic-white.png" class="img_logo w-2/4" alt="">
-                    </div>
-                    <h2 class="Iniciar_S mb-4 text text-center text-3xl font font-medium"> Iniciar Sesión </h2>
-                <form action="">
+        <section class="flex mt-16 mb-16">
+            <div class="Izquierda h-full w-2/4 ml-24 mr-8">
+                <div class="flex justify-start pb-4">
+                   <img src="resources\images/huelic-white.png" class="img_logo w-1/4" alt=""> 
+                   <h2 class="text-4xl pl-12 pt-10 font-semibold"> Únetenos </h2>
+                </div>
+               <form action="" class="pt-4 pl-16 pr-16">
                     <div>
                         <h3 class="font-semibold"> Correo Electronico: </h3>
                     </div>
-                    <div class="mb-2">
-                        <input type="text" class="apperance-none block w-full px-4 py-2 leading-tight text-gray-700 bg-gray-50 focus:bg-white border border-gray-200 focus:border-gray-500 rounded focus:outline-none">
+                    <div class="mb-6">
+                        <input type="text" class=" apperance-none block w-full px-4 py-2 leading-tight text-gray-700 bg-gray-50 focus:bg-white border border-gray-200 focus:border-gray-500 rounded focus:outline-none">
                     </div>
                     <div>
                         <h3 class="font-semibold"> Contraseña: </h3>
@@ -58,22 +56,23 @@
                     <div class="mb-6">
                         <input type="password" class="apperance-none block w-full px-4 py-2 leading-tight text-gray-700 bg-gray-50 focus:bg-white border border-gray-200 focus:border-gray-500 rounded focus:outline-none" >
                     </div>
+                    <div>
+                        <h3 class="font-semibold"> Repetir Contraseña: </h3>
+                    </div>
+                    <div class="mb-12">
+                        <input type="password" class="apperance-none block w-full px-4 py-2 leading-tight text-gray-700 bg-gray-50 focus:bg-white border border-gray-200 focus:border-gray-500 rounded focus:outline-none" >
+                    </div>
                     <div class="mb-4">
-                        <input type="button" class="inline-block w-full px-8 py-3 leading-none text-white bg-amber-800 rounded hover:bg-amber-900 font-semibold shadow" value="Iniciar Sesión">
+                        <input type="button" value="Crear Cuenta" class="inline-block w-full px-8 py-3 leading-none text-white bg-amber-800 rounded hover:bg-amber-900 font-semibold shadow">
                     </div>
-                    <div>
-                        <h4 class="mb-8 text text-xs font-semibold">Al continuar, aceptas las Condiciones de uso y el Aviso de privacidad de Huelic.</h4>
-                    </div>
-                    <div>
-                        <h3 class="mb-2 text text-center font-semibold"> ---------- Eres Nuevo en Huelic ----------</h3>
-                    </div>
-                    <div class="mb-8">
-                        <a href="Registrarse.php" class=" font-semibold inline-block w-full px-8 py-3 leading-none text-white bg-slate-400 rounded hover:bg-slate-500 font-semibold shadow border border-amber-900 border-2 text text-center"><input type="button" value="Crear tu cuenta Huelic"></a>
-                    </div>
-                </form>
             </div>
-            
-            
+            <div class="Derecha w-2/4 h-full pl-8 mr-24">
+                    <div class="pt-24 pl-20 w-3/4">
+                        <h3 class="font-semibold text-xl inline"> Tambien puedes conectarte con: </h3>
+                        <a href=""><img class="h-auto  mt-20 inline" src="resources/images/iniciargoogle.png" alt=""></a>
+                        <a href=""><img class="h-auto  mt-10 inline" src="resources/images/iniciarfacebook.png" alt=""></a>
+                    </div>
+            </div>   
         </section>
 
 
@@ -122,5 +121,6 @@
             </div>
         </footer>
 </div>
+    
 </body>
 </html>
