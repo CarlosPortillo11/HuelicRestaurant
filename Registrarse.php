@@ -38,10 +38,10 @@
         </header>
 
         <section class="flex mt-16 mb-16">
-            <div class="Izquierda h-full w-2/4 ml-24 mr-8">
-                <div class="flex justify-start pb-4">
+            <div class="Izquierda h-full w-2/4 ml-12 mr-18">
+                <div class="flex justify-center pb-4">
                    <img src="resources\images/huelic-white.png" class="img_logo w-1/4" alt=""> 
-                   <h2 class="text-4xl pl-12 pt-10 font-semibold"> Únetenos </h2>
+                   <h2 class="text-4xl pl-4 pt-10 font-semibold"> Únetenos </h2>
                 </div>
                <form action="" class="pt-4 pl-16 pr-16">
                     <div>
@@ -66,7 +66,7 @@
                         <input type="button" value="Crear Cuenta" class="inline-block w-full px-8 py-3 leading-none text-white bg-amber-800 rounded hover:bg-amber-900 font-semibold shadow">
                     </div>
             </div>
-            <div class="Derecha w-2/4 h-full pl-8 mr-24">
+            <div class="Derecha w-2/4 h-full ml-28 mr-12">
                     <div class="pt-24 pl-20 w-3/4">
                         <h3 class="font-semibold text-xl inline"> Tambien puedes conectarte con: </h3>
                         <a href=""><img class="h-auto  mt-20 inline" src="resources/images/iniciargoogle.png" alt=""></a>
