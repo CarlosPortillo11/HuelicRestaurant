@@ -1,14 +1,17 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/styles-reservaciones.css">
+    <link rel="stylesheet" href="css/Login.css">
     <link rel="stylesheet" href="css/slick.css">
     <script src="https://cdn.tailwindcss.com"></script>
-    <title>Huelic Restaurant</title>
+    <title>Reservación</title>
 </head>
+
 <body>
     <div class="contain">
         <header>
@@ -19,13 +22,13 @@
                     </a>
                 </div>
                 <div id="navTabs" class="w-1/3 flex flex-row justify-center">
-                    <a href="" class="text-white text-xl font-semibold py-5 px-8">Home</a>
+                    <a href="index.html" class="text-white text-xl font-semibold py-5 px-8">Home</a>
                     <a href="" class="text-white text-xl font-semibold py-5 px-8">Menú</a>
                     <a href="Reservaciones.php" class="text-white text-xl font-semibold py-5 px-8">Reservación</a>
                     <a href="" class="text-white text-xl font-semibold py-5 px-8">Contacto</a>
                 </div>
                 <div id="userTabs" class="w-1/3 h-full flex justify-end items-center">
-                    <a href="" class="h-full flex items-center px-3">
+                    <a href="Login.php" class="h-full flex items-center px-3">
                         <img src="resources/images/profile-user.png" alt="Login" id="userLogin">
                     </a>
                     <a href="" class="h-full flex items-center px-3" id="cartContainer">
@@ -35,49 +38,74 @@
                 </div>
             </nav>
         </header>
-        <section id="Hero">
-            <div class="w-full autoplay flex justify-center py-6">
-                <div class="">
-                    <img class="heroImage" src="resources/images/hero_table.jpg" alt="Hero 1">
+        <section>
+            <h1> Reservaciones </h1>
+            <div>
+                <div>
+                    <h3>Terraza</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero consequuntur cumque necessitatibus tempora debitis enim quae hic atque, minima perferendis dolores excepturi tempore. Harum, quibusdam velit. Magni quibusdam perspiciatis qui!</p>
                 </div>
-                <div class="">
-                    <img class="heroImage" src="resources/images/hero_table1.jpg" alt="Hero 2">
+                <div>
+                    <img src="resources/images/Terraza.jpg" alt="">
+                    <div>
+                        <div>
+                            <p>Nombre de la reserva:</p>
+                            <label for=""></label>
+                        </div>
+                        <div>
+                            <p>¿Qué día deseas reservar?</p>
+                            <label for=""></label>
+                        </div>
+                    </div>
+                    <button class="text-white font-semibold py-2 px-4 mBrown bg-hover"  class="text-white font-semibold py-2 px-4 mBrown bg-hover"> Reservar </button>
                 </div>
-                <div class="pb-3">
-                    <img class="heroImage" src="resources/images/hero_table2.jpg" alt="Hero 3">
+
+            </div>
+
+            <div>
+                <div>
+                    <h3>Terraza</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero consequuntur cumque necessitatibus tempora debitis enim quae hic atque, minima perferendis dolores excepturi tempore. Harum, quibusdam velit. Magni quibusdam perspiciatis qui!</p>
                 </div>
+                <div>
+                    <img src="resources/images/Terraza.jpg" alt="">
+                    <div>
+                        <div>
+                            <p>Nombre de la reserva:</p>
+                            <label for=""></label>
+                        </div>
+                        <div>
+                            <p>¿Qué día deseas reservar?</p>
+                            <label for=""></label>
+                        </div>
+                    </div>
+                    <button class="text-white font-semibold py-2 px-4 mBrown bg-hover " > Reservar </button>
+                </div>
+
+            </div>
+            <div>
+                <div>
+                    <h3>Terraza</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero consequuntur cumque necessitatibus tempora debitis enim quae hic atque, minima perferendis dolores excepturi tempore. Harum, quibusdam velit. Magni quibusdam perspiciatis qui!</p>
+                </div>
+                <div>
+                    <img src="resources/images/Terraza.jpg" alt="">
+                    <div>
+                        <div>
+                            <p>Nombre de la reserva:</p>
+                            <label for=""></label>
+                        </div>
+                        <div>
+                            <p>¿Qué día deseas reservar?</p>
+                            <label for=""></label>
+                        </div>
+                    </div>
+                    <button class="text-white font-semibold py-2 px-4 mBrown bg-hover" > Reservar </button>
+                </div>
+
             </div>
         </section>
-        <section id="promises">
-            <div id="promisesContainer" class="w-11/12 flex bg-white mx-auto px-4 py-5 border-4 justify-around my-8">
-                <div class="w-1/4 flex py-2 items-center justify-around">
-                    <img class="promisesLogo" src="resources/images/checked.png" alt="Buena Calidad">
-                    <p class="text-center">
-                        Poseemos <br> la <br> mejor calidad
-                    </p>
-                </div>
-                <div class="w-1/4 flex py-2 items-center justify-around">
-                    <img class="promisesLogo" src="resources/images/thumbs-up.png" alt="Excelente Atención">
-                    <p class="text-center">
-                        La mejor atención <br> al <br> cliente
-                    </p>
-                </div>
-                <div class="w-1/4 flex py-2 items-center justify-around">
-                    <img class="promisesLogo" src="resources/images/gel.png" alt="Prótocolos de Salud">
-                    <p class="text-center">
-                        Protocolos <br> de <br> salud
-                    </p>
-                </div>
-            </div>
-        </section>
-        <section id="menu">
-            <div class="w-full my-24 py-8 flex justify-around">
-                <img class="menuLogo" src="resources/images/placeholder.png" alt="Food Placeholder">
-                <img class="menuLogo" src="resources/images/placeholder.png" alt="Food Placeholder">
-                <img class="menuLogo" src="resources/images/placeholder.png" alt="Food Placeholder">
-                <img class="menuLogo" src="resources/images/placeholder.png" alt="Food Placeholder">
-            </div>
-        </section>
+
         <footer class="w-full bg-black">
             <p class="font-semibold text-white text-xl text-center py-5">Si deseas ordenar a través de nuestro call center llama al (503) 2257-7777</p>
             <div class="w-full py-2 flex">
@@ -121,9 +149,6 @@
             </div>
         </footer>
     </div>
-
-    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-    <script src="js/slick.min.js"></script>
-    <script src="js/slick_carrousel.js"></script>
 </body>
+
 </html>
