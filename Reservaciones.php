@@ -38,72 +38,77 @@
                 </div>
             </nav>
         </header>
-        <section>
-            <h1> Reservaciones </h1>
-            <div>
+        <section class="contenedor">
+            <h1 class="text-3xl text-center font font-medium border-b-4 mx-20 border-[#664638]"> Reservaciones </h1>
+            <div class="cajas">
                 <div>
-                    <h3>Terraza</h3>
+                    <h3 class="text-left text-xl font font-medium">Terraza</h3>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero consequuntur cumque necessitatibus tempora debitis enim quae hic atque, minima perferendis dolores excepturi tempore. Harum, quibusdam velit. Magni quibusdam perspiciatis qui!</p>
                 </div>
-                <div>
-                    <img src="resources/images/Terraza.jpg" alt="">
-                    <div>
-                        <div>
-                            <p>Nombre de la reserva:</p>
-                            <label for=""></label>
-                        </div>
-                        <div>
-                            <p>¿Qué día deseas reservar?</p>
-                            <label for=""></label>
-                        </div>
+                <div class="contenedor-img-textbox grid grid-cols-2 gap-2 content-center">
+                    <div class="img-reservacion">
+                        <img src="resources/images/Terraza.jpg" alt="">
                     </div>
-                    <button class="text-white font-semibold py-2 px-4 mBrown bg-hover"  class="text-white font-semibold py-2 px-4 mBrown bg-hover"> Reservar </button>
+                    <div class="text-center caja-texboxs">
+                        <div class="texbox-labels">
+                            <p>Nombre de la reserva:</p>
+                            <label for="">label</label>
+                        </div>
+                        <div class="texbox-labels">
+                            <p>¿Qué día deseas reservar?</p>
+                            <label for="">label</label>
+                        </div>
+                        <button class="text-white font-semibold py-2 px-4 mBrown bg-hover btn-reservacion" class="text-white font-semibold py-2 px-4 mBrown bg-hover"> Reservar </button>
+                    </div>
                 </div>
-
             </div>
-
-            <div>
+            <div class="cajas">
                 <div>
-                    <h3>Terraza</h3>
+                    <h3 class="text-right text-xl font font-medium">Terraza</h3>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero consequuntur cumque necessitatibus tempora debitis enim quae hic atque, minima perferendis dolores excepturi tempore. Harum, quibusdam velit. Magni quibusdam perspiciatis qui!</p>
                 </div>
-                <div>
-                    <img src="resources/images/Terraza.jpg" alt="">
-                    <div>
-                        <div>
+                <div class="contenedor-img-textbox grid grid-cols-2 gap-2 content-center">
+                    <div class="text-center caja-texboxs">
+                        <div class="texbox-labels">
                             <p>Nombre de la reserva:</p>
-                            <label for=""></label>
+                            <label for="">label</label>
                         </div>
-                        <div>
+                        <div class="texbox-labels">
                             <p>¿Qué día deseas reservar?</p>
-                            <label for=""></label>
+                            <label for="">label</label>
                         </div>
+                        <button class="text-white font-semibold py-2 px-4 mBrown bg-hover btn-reservacion" class="text-white font-semibold py-2 px-4 mBrown bg-hover"> Reservar </button>
                     </div>
-                    <button class="text-white font-semibold py-2 px-4 mBrown bg-hover " > Reservar </button>
-                </div>
+                    <div class="img-reservacion">
+                        <img src="resources/images/Terraza.jpg" alt="">
+                    </div>
 
+                </div>
             </div>
-            <div>
+            <div class="cajas">
                 <div>
-                    <h3>Terraza</h3>
+                    <h3 class="text-left text-xl font font-medium">Terraza</h3>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero consequuntur cumque necessitatibus tempora debitis enim quae hic atque, minima perferendis dolores excepturi tempore. Harum, quibusdam velit. Magni quibusdam perspiciatis qui!</p>
                 </div>
-                <div>
-                    <img src="resources/images/Terraza.jpg" alt="">
-                    <div>
-                        <div>
-                            <p>Nombre de la reserva:</p>
-                            <label for=""></label>
-                        </div>
-                        <div>
-                            <p>¿Qué día deseas reservar?</p>
-                            <label for=""></label>
-                        </div>
+                <div class="contenedor-img-textbox grid grid-cols-2 gap-2 content-center">
+                    <div class="img-reservacion">
+                        <img src="resources/images/Terraza.jpg" alt="">
                     </div>
-                    <button class="text-white font-semibold py-2 px-4 mBrown bg-hover" > Reservar </button>
+                    <div class="text-center caja-texboxs">
+                        <div class="texbox-labels">
+                            <p>Nombre de la reserva:</p>
+                            <label for="">label</label>
+                        </div>
+                        <div class="texbox-labels">
+                            <p>¿Qué día deseas reservar?</p>
+                            <label for="">label</label>
+                        </div>
+                        <button class="text-white font-semibold py-2 px-4 mBrown bg-hover btn-reservacion" class="text-white font-semibold py-2 px-4 mBrown bg-hover"> Reservar </button>
+                    </div>
                 </div>
-
             </div>
+
+
         </section>
 
         <footer class="w-full bg-black">

@@ -17,6 +17,12 @@ body{
 nav{
     height: 70px;
 }
+.contenedor{
+    padding: 2% 15% 5% 15%;
+}
+.cajas{
+    padding-top: 10%;
+}
 .bg-hover:hover{
     background-color: #897759;
 }
@@ -25,6 +31,18 @@ nav{
     transition-duration: 0.4s;
     transition-property: all;
 }
+.caja-texboxs{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center; 
+    max-width: 100%;  
+}
+
+.texbox-labels{
+    padding: 15px 0 15px 0;
+}
+
 
 #restaurantLogo{
     width: 50px;
@@ -108,4 +126,13 @@ nav{
     height: 40px;
     background-color: white;
     border-radius: 10px;
+}
+
+@media only screen and (min-width: 1024px){
+    .contenedor{
+        padding: 2% 22% 5% 22%;
+    }
+    .cajas{
+        padding-top: 5%;
+    }
 }
