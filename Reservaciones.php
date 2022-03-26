@@ -49,17 +49,31 @@
                     <div class="img-reservacion">
                         <img src="resources/images/Terraza.jpg" alt="">
                     </div>
-                    <div class="text-center caja-texboxs">
-                        <div class="texbox-labels">
-                            <p>Nombre de la reserva:</p>
-                            <label for="">label</label>
+                    <form action="Reservar.php" method="post">
+                        <div class="text-center caja-texboxs">
+                            <div class="texbox-labels">
+                                <div>
+                                    <h3 class="font-semibold"> Correo Electronico: </h3>
+                                </div>
+                                <div class="mb-6">
+                                    <input type="text" name="correo" class=" apperance-none block w-full px-4 py-2 leading-tight text-gray-700 bg-gray-50 focus:bg-white border border-gray-200 focus:border-gray-500 rounded focus:outline-none">
+                                </div>
+                            </div>
+                            <div class="texbox-labels">
+                                <div>
+                                    <h3 class="font-semibold">Lugar: </h3>
+                                </div>
+                                <div class="mb-6">
+                                    <input type="text" name="lugar" value="Terraza" class=" apperance-none block w-full px-4 py-2 leading-tight text-gray-700 bg-gray-50 focus:bg-white border border-gray-200 focus:border-gray-500 rounded focus:outline-none" readonly>
+                                </div>
+                            </div>
+                            <div class="texbox-labels">
+                                <label for="fecha">¿Qué día deseas reservar?</label>
+                                <input type="datetime-local" id="fecha" name="fecha" value="2022-03-26T19:00">
+                            </div>
+                            <input type="submit" value="Reservar" class="inline-block w-full px-8 py-3 leading-none text-white bg-amber-800 rounded hover:bg-amber-900 font-semibold shadow">
                         </div>
-                        <div class="texbox-labels">
-                            <p>¿Qué día deseas reservar?</p>
-                            <label for="">label</label>
-                        </div>
-                        <button class="text-white font-semibold py-2 px-4 mBrown bg-hover btn-reservacion" class="text-white font-semibold py-2 px-4 mBrown bg-hover"> Reservar </button>
-                    </div>
+                    </form>
                 </div>
             </div>
             <div class="cajas">
