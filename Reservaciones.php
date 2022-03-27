@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/styles-reservaciones.css">
+    <link rel="stylesheet" href="css/styles-reservacion.css">
     <link rel="stylesheet" href="css/Login.css">
     <link rel="stylesheet" href="css/slick.css">
     <script src="https://cdn.tailwindcss.com"></script>
@@ -18,7 +18,7 @@
             <nav class="w-full mBrown flex items-center">
                 <div id="logosName" class="flex w-1/3">
                     <a href="">
-                        <img src="resources/images/placeholder.png" alt="Logo del restaurante" id="restaurantLogo">
+                        <img  src="resources/images/placeholder.png" alt="Logo del restaurante" id="restaurantLogo">
                     </a>
                 </div>
                 <div id="navTabs" class="w-1/3 flex flex-row justify-center">
@@ -29,10 +29,10 @@
                 </div>
                 <div id="userTabs" class="w-1/3 h-full flex justify-end items-center">
                     <a href="Login.php" class="h-full flex items-center px-3">
-                        <img src="resources/images/profile-user.png" alt="Login" id="userLogin">
+                        <img  src="resources/images/profile-user.png" alt="Login" id="userLogin">
                     </a>
                     <a href="" class="h-full flex items-center px-3" id="cartContainer">
-                        <img src="resources/images/carro.png" alt="Carrito de compras" id="shopCart">
+                        <img  src="resources/images/carro.png" alt="Carrito de compras" id="shopCart">
                         <p class="ml-2 text-white font-semibold">$00.00</p>
                     </a>
                 </div>
@@ -47,7 +47,7 @@
                 </div>
                 <div class="contenedor-img-textbox grid grid-cols-2 gap-2 content-center">
                     <div class="img-reservacion">
-                        <img src="resources/images/Terraza.jpg" alt="">
+                        <img  src="resources/images/Terraza1.jpg" alt="">
                     </div>
                     <form action="Reservar.php" method="post">
                         <div class="text-center caja-texboxs">
@@ -78,47 +78,77 @@
             </div>
             <div class="cajas">
                 <div>
-                    <h3 class="text-right text-xl font font-medium">Terraza</h3>
+                    <h3 class="text-right text-xl font font-medium">Sala</h3>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero consequuntur cumque necessitatibus tempora debitis enim quae hic atque, minima perferendis dolores excepturi tempore. Harum, quibusdam velit. Magni quibusdam perspiciatis qui!</p>
                 </div>
                 <div class="contenedor-img-textbox grid grid-cols-2 gap-2 content-center">
                     <div class="text-center caja-texboxs">
-                        <div class="texbox-labels">
-                            <p>Nombre de la reserva:</p>
-                            <label for="">label</label>
-                        </div>
-                        <div class="texbox-labels">
-                            <p>¿Qué día deseas reservar?</p>
-                            <label for="">label</label>
-                        </div>
-                        <button class="text-white font-semibold py-2 px-4 mBrown bg-hover btn-reservacion" class="text-white font-semibold py-2 px-4 mBrown bg-hover"> Reservar </button>
+                        <form action="Reservar.php" method="post">
+                            <div class="text-center caja-texboxs">
+                                <div class="texbox-labels">
+                                    <div>
+                                        <h3 class="font-semibold"> Correo Electronico: </h3>
+                                    </div>
+                                    <div class="mb-6">
+                                        <input type="text" name="correo" class=" apperance-none block w-full px-4 py-2 leading-tight text-gray-700 bg-gray-50 focus:bg-white border border-gray-200 focus:border-gray-500 rounded focus:outline-none">
+                                    </div>
+                                </div>
+                                <div class="texbox-labels">
+                                    <div>
+                                        <h3 class="font-semibold">Lugar: </h3>
+                                    </div>
+                                    <div class="mb-6">
+                                        <input type="text" name="lugar" value="Sala" class=" apperance-none block w-full px-4 py-2 leading-tight text-gray-700 bg-gray-50 focus:bg-white border border-gray-200 focus:border-gray-500 rounded focus:outline-none" readonly>
+                                    </div>
+                                </div>
+                                <div class="texbox-labels">
+                                    <label for="fecha">¿Qué día deseas reservar?</label>
+                                    <input type="datetime-local" id="fecha" name="fecha" value="2022-03-26T19:00">
+                                </div>
+                                <input type="submit" value="Reservar" class="inline-block w-full px-8 py-3 leading-none text-white bg-amber-800 rounded hover:bg-amber-900 font-semibold shadow">
+                            </div>
+                        </form>
                     </div>
                     <div class="img-reservacion">
-                        <img src="resources/images/Terraza.jpg" alt="">
+                        <img  src="resources/images/comedor1.jpg" alt="">
                     </div>
 
                 </div>
             </div>
             <div class="cajas">
                 <div>
-                    <h3 class="text-left text-xl font font-medium">Terraza</h3>
+                    <h3 class="text-left text-xl font font-medium">Jardin</h3>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero consequuntur cumque necessitatibus tempora debitis enim quae hic atque, minima perferendis dolores excepturi tempore. Harum, quibusdam velit. Magni quibusdam perspiciatis qui!</p>
                 </div>
                 <div class="contenedor-img-textbox grid grid-cols-2 gap-2 content-center">
                     <div class="img-reservacion">
-                        <img src="resources/images/Terraza.jpg" alt="">
+                        <img  src="resources/images/comedor-jardin.jpg" alt="">
                     </div>
-                    <div class="text-center caja-texboxs">
-                        <div class="texbox-labels">
-                            <p>Nombre de la reserva:</p>
-                            <label for="">label</label>
+                    <form action="Reservar.php" method="post">
+                        <div class="text-center caja-texboxs">
+                            <div class="texbox-labels">
+                                <div>
+                                    <h3 class="font-semibold"> Correo Electronico: </h3>
+                                </div>
+                                <div class="mb-6">
+                                    <input type="text" name="correo" class=" apperance-none block w-full px-4 py-2 leading-tight text-gray-700 bg-gray-50 focus:bg-white border border-gray-200 focus:border-gray-500 rounded focus:outline-none">
+                                </div>
+                            </div>
+                            <div class="texbox-labels">
+                                <div>
+                                    <h3 class="font-semibold">Lugar: </h3>
+                                </div>
+                                <div class="mb-6">
+                                    <input type="text" name="lugar" value="Jardin" class=" apperance-none block w-full px-4 py-2 leading-tight text-gray-700 bg-gray-50 focus:bg-white border border-gray-200 focus:border-gray-500 rounded focus:outline-none" readonly>
+                                </div>
+                            </div>
+                            <div class="texbox-labels">
+                                <label for="fecha">¿Qué día deseas reservar?</label>
+                                <input type="datetime-local" id="fecha" name="fecha" value="2022-03-26T19:00">
+                            </div>
+                            <input type="submit" value="Reservar" class="inline-block w-full px-8 py-3 leading-none text-white bg-amber-800 rounded hover:bg-amber-900 font-semibold shadow">
                         </div>
-                        <div class="texbox-labels">
-                            <p>¿Qué día deseas reservar?</p>
-                            <label for="">label</label>
-                        </div>
-                        <button class="text-white font-semibold py-2 px-4 mBrown bg-hover btn-reservacion" class="text-white font-semibold py-2 px-4 mBrown bg-hover"> Reservar </button>
-                    </div>
+                    </form>
                 </div>
             </div>
 
