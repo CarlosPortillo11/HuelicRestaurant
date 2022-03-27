@@ -20,7 +20,7 @@
                 </div>
                 <div id="navTabs" class="w-1/3 flex flex-row justify-center">
                     <a href="" class="text-white text-xl font-semibold py-5 px-8">Home</a>
-                    <a href="" class="text-white text-xl font-semibold py-5 px-8">Menú</a>
+                    <a href="menu.php" class="text-white text-xl font-semibold py-5 px-8">Menú</a>
                     <a href="" class="text-white text-xl font-semibold py-5 px-8">Reservación</a>
                     <a href="" class="text-white text-xl font-semibold py-5 px-8">Contacto</a>
                 </div>
@@ -36,14 +36,14 @@
             </nav>
         </header>
         <section id="Hero">
-            <div class="w-full autoplay flex justify-center py-6">
+            <div class="w-full autoplay flex justify-center py-12">
                 <div class="">
                     <img class="heroImage" src="resources/images/hero_table.jpg" alt="Hero 1">
                 </div>
                 <div class="">
                     <img class="heroImage" src="resources/images/hero_table1.jpg" alt="Hero 2">
                 </div>
-                <div class="pb-3">
+                <div class="">
                     <img class="heroImage" src="resources/images/hero_table2.jpg" alt="Hero 3">
                 </div>
             </div>
