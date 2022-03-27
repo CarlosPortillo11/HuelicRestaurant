@@ -1,6 +1,30 @@
 # HuelicRestaurant
 
-INDICACIONES PARA CONFIGURACION PARA EL ENVIO CORRECTO DE CORREOS
+//INTEGRANTES
+
+Espinoza Anzora, Mirna Elizabeth EA190278
+Portillo Martínez, Carlos Emerson PM191144
+Martínez Nerio, Mauricio Alejandro MN190349
+Aguilar Panameño, David Alexander AP190139
+Amaya Ramírez, David Elías AR190019
+
+
+//LINK TRELLO
+
+https://trello.com/b/WmWpdIi2/huelic-restaurant
+
+
+//LINK FIGMA (Mock Ups)
+
+https://www.figma.com/file/tG6gXY25vAQfTswYwVSb5R/Huelic-Restaurant?node-id=0%3A1
+
+
+//DOCUMENTO PDF
+
+[Proyecto de catedra LIS 2022 fase I.pdf](https://github.com/CarlosPortillo11/HuelicRestaurant/files/8357024/Proyecto.de.catedra.LIS.2022.fase.I.pdf)
+
+
+//INDICACIONES PARA CONFIGURACION DEL ENVIO CORRECTO DE CORREOS
 
 Primero: copiar la carpeta "sendmail" que está en el repositorio, en Wamp
 Segundo: el archivo "sendmail.ini" ya está configurado con lo necesario
@@ -23,3 +47,12 @@ Nota: El archivo "sendmail" ya está configurado con las siguientes credenciales
       
       La página "Reservas" en el correo que pide, debe ingresar el que proporcionamos (de momento) para que evidencie que si son enviados los correos al "cliente" de 
       confirmación.
+//MANUAL DE USUARIO
+
+[Manual_de_Usuario.pdf](https://github.com/CarlosPortillo11/HuelicRestaurant/files/8357032/Manual_de_Usuario.pdf)
+
+https://www.canva.com/design/DAE8JF-j4f0/82WEdG3mlT8rj0Kd-tazdw/view?utm_content=DAE8JF-j4f0&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
+
+//LICENCIAS CREATIVE COMMONS
+
+<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Licencia de Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" /></a><br />Este obra está bajo una <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">licencia de Creative Commons Reconocimiento-NoComercial 4.0 Internacional</a>.
