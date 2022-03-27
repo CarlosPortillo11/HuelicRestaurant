@@ -47,7 +47,7 @@
                 </div>
                 <div class="contenedor-img-textbox grid grid-cols-2 gap-2 content-center">
                     <div class="img-reservacion">
-                        <img  src="resources/images/Terraza1.jpg" alt="">
+                        <img  src="resources/images/Terraza.jpg" alt="">
                     </div>
                     <form action="Reservar.php" method="post">
                         <div class="text-center caja-texboxs">

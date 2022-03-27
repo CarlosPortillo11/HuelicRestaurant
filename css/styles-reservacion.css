@@ -138,4 +138,8 @@ nav{
     .cajas{
         padding-top: 5%;
     }
+    .img-reservacion{
+        max-width: 800px;
+        max-height: 10%;
+    }
 }
