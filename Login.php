@@ -15,7 +15,7 @@
         <header>
             <nav class="w-full mBrown flex items-center">
                 <div id="logosName" class="flex w-1/3">
-                    <a href="">
+                    <a href="index.html">
                         <img src="resources/images/huelic-white.png" alt="Logo del restaurante" id="restaurantLogo">
                     </a>
                 </div>
@@ -83,7 +83,7 @@
             <p class="font-semibold text-white text-xl text-center py-5">Si deseas ordenar a través de nuestro call center llama al (503) 2257-7777</p>
             <div class="w-full py-2 flex">
                 <div class="w-1/3 flex justify-center py-4 border-r-2 border-gray">
-                    <a href="">
+                    <a href="Login.php">
                         <p class="text-white">Cuenta</p>
                     </a>
                 </div>
@@ -93,7 +93,7 @@
                     </a>
                 </div>
                 <div class="w-1/3 flex justify-center py-4 ">
-                    <a href="">
+                    <a href="contact.php">
                         <p class="text-white">Contáctanos</p>
                     </a>
                 </div>
@@ -112,7 +112,7 @@
                     <img class="socialLogo" src="resources/images/twitter.png" alt="Twitter Logo">
                 </div>
                 <div class="w-1/6 flex justify-center">
-                    <img class="footerLogo" src="resources/images/placeholder.png" alt="">
+                    <img class="footerLogo" src="resources/images/huelic-white.png" alt="Logo del restaurante" id="restaurantLogo">
                 </div>
                 <div class="w-1/6 flex justify-around items-center pr-2">
                     <img class="creditLogo" src="resources/images/mc_symbol_opt_63_1x.png" alt="Mastercard Logo">

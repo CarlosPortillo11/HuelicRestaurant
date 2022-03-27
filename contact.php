@@ -14,7 +14,7 @@
         <header>
             <nav class="w-full mBrown flex items-center">
                 <div id="logosName" class="flex w-1/3">
-                    <a href="">
+                    <a href="index.html">
                         <img src="resources/images/huelic-white.png" alt="Logo del restaurante" id="restaurantLogo">
                     </a>
                 </div>
