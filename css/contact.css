@@ -1,0 +1,162 @@
+body{
+    background-image: url(../resources/images/marmol_background.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.mBrown{
+    background-color: #664638;
+}
+
+.tBrown{
+    background-color: #897759;
+}
+
+nav{
+    height: 70px;
+}
+
+#restaurantLogo{
+    width: 50px;
+    height: 45px;
+    border-radius: 10px;
+    margin-left: 10px;
+}
+
+#navTabs a{
+    transition-delay: 0.1s;
+    transition-duration: 0.4s;
+    transition-property: all;
+}
+
+#navTabs a:hover{
+    background-color: #897759;
+}
+
+#userTabs a{
+    transition-delay: 0.1s;
+    transition-duration: 0.4s;
+    transition-property: all;
+}
+
+#userTabs a:hover{
+    background-color: #897759;
+}
+
+#userLogin{
+    width: 40px;
+    height: 35px;
+}
+
+#shopCart{
+    width: 40px;
+    height: 35px;
+}
+
+/*main content*/
+
+.main_content{
+    width: 70%;
+    min-height: 100vh;
+    margin: 0px auto;
+}
+
+.contact_text{
+    width: 100%;
+    text-align: center;
+    padding: 40px;
+    font-size: 20pt;
+}
+
+.mainContainer_Descp{
+    display: flex;
+    align-items: center;
+}
+
+.main_text, .form{
+    width: 50%;
+    margin: 10px;
+    padding: 10px;
+}
+
+.main_text{
+    border-right: 5px solid #A9A9A9;
+}
+
+.main_text > p{
+    width: 100%;
+    padding: 20px 40px 20px 40px;
+    font-size: 16pt;
+    text-align: justify;
+}
+
+.form{
+    padding-left: 30px;
+    padding-right: 30px;
+    font-size: 16pt;
+    text-align: justify;
+}
+
+.form input, .form label{
+    margin: 10px;
+    padding: 2px;
+    width: 100%;
+}
+
+.form input{
+    color: white;
+    background-color: #A9A9A9;
+    border: 1px solid #a09f9f;
+}
+
+.form ::placeholder{
+    color: whitesmoke;
+}
+
+#description{
+    height: 100px;
+}
+
+.form .button{
+    width: 50%;
+    display: block;
+    margin: 0 auto;
+    margin-top: 10px;
+    color: white;
+    cursor: pointer;
+    border: 1px solid #583c30;
+    background-color: #664638;
+    box-shadow: 0px 0px 5px #583c30;
+}
+
+.form .button:hover{
+    background-color: #897759;
+    border: 1px solid #7a6b4f;
+}
+
+/*footer*/
+
+footer{
+    position: relative;
+    bottom: 0;
+}
+
+.socialLogo{
+    width: 40px;
+    height: 40px;
+}
+
+.footerLogo{
+    width: 55px;
+    height: 50px;
+    border-radius: 5px;
+}
+
+.creditLogo{
+    width: 65px;
+    height: 40px;
+    background-color: white;
+    border-radius: 10px;
+}
