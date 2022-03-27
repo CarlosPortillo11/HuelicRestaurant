@@ -16,7 +16,7 @@
             <nav class="w-full mBrown flex items-center">
                 <div id="logosName" class="flex w-1/3">
                     <a href="">
-                        <img src="resources/images/placeholder.png" alt="Logo del restaurante" id="restaurantLogo">
+                        <img src="resources/images/huelic-white.png" alt="Logo del restaurante" id="restaurantLogo">
                     </a>
                 </div>
                 <div id="navTabs" class="w-1/3 flex flex-row justify-center">
