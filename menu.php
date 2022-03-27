@@ -28,14 +28,14 @@
             <nav class="w-full mBrown flex items-center">
                 <div id="logosName" class="flex w-1/3">
                     <a href="">
-                        <img src="resources/images/placeholder.png" alt="Logo del restaurante" id="restaurantLogo">
+                        <img src="resources/images/huelic-white.png" alt="Logo del restaurante" id="restaurantLogo">
                     </a>
                 </div>
                 <div id="navTabs" class="w-1/3 flex flex-row justify-center">
-                    <a href="" class="text-white text-xl font-semibold py-5 px-8">Home</a>
+                    <a href="index.html" class="text-white text-xl font-semibold py-5 px-8">Home</a>
                     <a href="menu.php" class="text-white text-xl font-semibold py-5 px-8">Menú</a>
-                    <a href="" class="text-white text-xl font-semibold py-5 px-8">Reservación</a>
-                    <a href="" class="text-white text-xl font-semibold py-5 px-8">Contacto</a>
+                    <a href="Reservaciones.php" class="text-white text-xl font-semibold py-5 px-8">Reservación</a>
+                    <a href="contact.php" class="text-white text-xl font-semibold py-5 px-8">Contacto</a>
                 </div>
                 <div id="userTabs" class="w-1/3 h-full flex justify-end items-center">
                     <a href="" class="h-full flex items-center px-3">
