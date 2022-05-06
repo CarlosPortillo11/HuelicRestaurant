@@ -58,16 +58,30 @@ nav{
 /*main content*/
 
 .main_content{
-    width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     min-height: 100vh;
-    margin: 0px auto;
+    margin: auto;
+}
+
+.into-main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+    width: 65%;
+    min-height: 80vh;
+    background-color: white;
+    border-radius: 10px;
+    border: 4px solid #78350F;
 }
 
 .contact_text{
     width: 100%;
     text-align: center;
-    padding: 40px;
     font-size: 20pt;
+    padding-bottom: 40px;
 }
 
 .mainContainer_Descp{
@@ -77,8 +91,6 @@ nav{
 
 .main_text, .form{
     width: 50%;
-    margin: 10px;
-    padding: 10px;
 }
 
 .main_text{
@@ -106,13 +118,13 @@ nav{
 }
 
 .form input{
-    color: white;
-    background-color: #A9A9A9;
-    border: 1px solid #a09f9f;
+    color: #000;
+    background-color: #F9FAFB;
+    border: 1px solid #E5E7EB;
 }
 
 .form ::placeholder{
-    color: whitesmoke;
+    color: #cac9c9;
 }
 
 #description{
@@ -120,7 +132,7 @@ nav{
 }
 
 .form .button{
-    width: 50%;
+    width: auto;
     display: block;
     margin: 0 auto;
     margin-top: 10px;
