@@ -48,7 +48,7 @@
                 </div>
                 <div class="contenedor-img-textbox grid grid-cols-2 gap-2 content-center">
                     <div class="img-reservacion">
-                        <img  src="resources/images/Terraza.jpg" alt="">
+                        <img  src="resources/Imagenes Reservacion/terraza.png" alt="">
                     </div>
                     <form action="Reservar.php" method="post">
                         <div class="text-center caja-texboxs">
@@ -111,7 +111,7 @@
                         </form>
                     </div>
                     <div class="img-reservacion">
-                        <img  src="resources/images/comedor1.jpg" alt="">
+                        <img  src="resources/Imagenes Reservacion//sala.png" alt="">
                     </div>
 
                 </div>
@@ -123,7 +123,7 @@
                 </div>
                 <div class="contenedor-img-textbox grid grid-cols-2 gap-2 content-center">
                     <div class="img-reservacion">
-                        <img  src="resources/images/comedor-jardin.jpg" alt="">
+                        <img  src="resources/Imagenes Reservacion/jardin.png" alt="">
                     </div>
                     <form action="Reservar.php" method="post">
                         <div class="text-center caja-texboxs">
