@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="css/contact.css">
+        <link rel="stylesheet" href="css/Carrito.css">
         <link rel="stylesheet" href="css/styles.css">
         <script src="https://cdn.tailwindcss.com"></script>
         <title>Huelic Restaurant</title>
@@ -14,13 +14,13 @@
         <header>
             <nav class="w-full mBrown flex items-center">
                 <div id="logosName" class="flex w-1/3">
-                    <a href="index.php">
+                    <a href="index.html">
                         <img src="resources/images/huelic-white.png" alt="Logo del restaurante" id="restaurantLogo">
                     </a>
                 </div>
                 <div id="navTabs" class="w-1/3 flex flex-row justify-center">
-                    <a href="index.php" class="text-white text-xl font-semibold py-5 px-8">Home</a>
-                    <a href="menu.php" class="text-white text-xl font-semibold py-5 px-8">Menú</a>
+                    <a href="index.html" class="text-white text-xl font-semibold py-5 px-8">Home</a>
+                    <a href="" class="text-white text-xl font-semibold py-5 px-8">Menú</a>
                     <a href="Reservaciones.php" class="text-white text-xl font-semibold py-5 px-8">Reservación</a>
                     <a href="contact.php" class="text-white text-xl font-semibold py-5 px-8">Contacto</a>
                 </div>
@@ -36,54 +36,60 @@
             </nav>
         </header>
         <!--Content section-->
-        <section class="main_content">
-            <section class="into-main">
-                <h1 class="contact_text">Contáctanos</h1>
-                <div class="mainContainer_Descp">
-                    <div class="main_text">
-                        <p>Queremos oír lo que tienes que decir.<br><br>
-                        Porque garantizar la satisfacción de nuestros clientes es casi tan importante como entregar felicidad por medio de nuestra comida.</p>
-                    </div>
-                    <div class="form">
-                        <?php
-                            echo "<form method=\"POST\">";
-                                echo "<label for=\"nombre\">Nombre:</label><br>";
-                                echo "<input type=\"text\" name=\"nombre\" id=\"nombre\" placeholder= \"Introduzca su nombre\" required=\" \"/><br>";
-                                echo "<label for=\"mail\">Correo Electrónico:</label><br>";
-                                echo "<input type=\"email\" name=\"mail\" id=\"mail\" placeholder=\"Introduzca su correo eléctronico\" required=\" \"/><br>";
-                                echo "<label for=\"description\">¿Qué nos quieres decir?</label><br>";
-                                echo "<input type=\"text\" name=\"description\" id=\"description\" placeholder=\"Escríbenos tu comentario\" required=\" \"/><br>";
-                                echo "<input type=\"submit\" value=\"Envíanos tus comentarios\" class=\"button\"/>";
-                                echo "";
-                            echo "</form>";
-
-                            //Envío de datos
-                            if($_SERVER['REQUEST_METHOD']=='POST'){
-                            $cliente = $_POST["nombre"];
-                            $correo = $_POST["mail"];
-                            $mensaje = $_POST["description"];
-                            $destino = "LISHuelic@gmail.com";
-                            $subject = "Contacto Cliente";
-                            $headers = 'From: Clientes Restaurante' . "\r\n" .
-                                        'Reply-to: Clientes Restaurante' . "\r\n" .
-                                        'X-Mailer: PHP/' . phpversion();
-
         
-                            $contacto = "Nombre del cliente: " .$cliente. "\nCorreo: " .$correo. "\nMensaje: " .$mensaje. "<br>";
-                            
-                            if(mail($destino, $subject, $contacto, $headers)){
-                                echo "<br> Gracias por por ponerte en contacto con nostros, tu mensaje ha sido enviado con éxito";
-                            }
-                            else{
-                                echo "<br>No se pudo enviar el mensaje";
-                            }
-                        }
-
-                        ?>     
-                    </div>
-                </div>
+        <main class="content">
+            <section class="cart_confirm">
+                <section class="main_text">
+                    <h1>Carrito de compras</h1>
+                </section>
+                <table class="sub_content">
+                    <tr>
+                        <th>Producto</th>
+                        <th>Cantidad</th>
+                        <th>Precio</th>
+                        <th>Subtotal</th>
+                    </tr>
+                    <tr>
+                        <td>Prueba</td>
+                        <td>2</td>
+                        <td>$0.00</td>
+                        <td>$0.00</td>
+                    </tr>
+                    <tr>
+                        <td>Prueba</td>
+                        <td>2</td>
+                        <td>$0.00</td>
+                        <td>$0.00</td>
+                    </tr>
+                    <tr>
+                        <td>Prueba</td>
+                        <td>2</td>
+                        <td>$0.00</td>
+                        <td>$0.00</td>
+                    </tr>
+                    <tr>
+                        <td>Prueba</td>
+                        <td>2</td>
+                        <td>$0.00</td>
+                        <td>$0.00</td>
+                    </tr>
+                </table><hr>
+                <section class="purchase">
+                    <form>
+                        <section>
+                            <label class="summary">Subtotal:</label>
+                            <label class="summary">$0.00</label>
+                        </section>
+                        <section>
+                            <label class="summary">Total:</label>
+                            <label class="summary">$0.00</label>
+                        </section>
+                        <input type="submit" value="Generar factura" id="facturar" class="button"/>
+                    </form>
+                </section>
             </section>
-        </section>
+        </main>
+
         <!--footer section-->
         <footer class="w-full bg-black">
             <p class="font-semibold text-white text-xl text-center py-5">Si deseas ordenar a través de nuestro call center llama al (503) 2257-7777</p>
