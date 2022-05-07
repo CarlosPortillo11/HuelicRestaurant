@@ -14,13 +14,14 @@ body{
     background-color: #897759;
 }
 
+/*Nav CSS*/
 nav{
-    height: 70px;
+    height: 90px;
 }
 
 #restaurantLogo{
-    width: 50px;
-    height: 45px;
+    width: 90px;
+    height: 80px;
     border-radius: 10px;
     margin-left: 10px;
 }
@@ -45,7 +46,6 @@ nav{
     background-color: #897759;
 }
 
-
 #userLogin{
     width: 40px;
     height: 35px;
@@ -55,7 +55,7 @@ nav{
     width: 40px;
     height: 35px;
 }
-
+/*Nav CSS*/
 
 .heroImage{
     height: 500px;
