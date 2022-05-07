@@ -12,7 +12,7 @@ $destino = $correo;
     $query= mysqli_query($con,$sql);   
     
     if($query){
-        Header("Location:index.html");
+        Header("Location:index.php");
         
     }else {
         echo "<h1>F</h1>";
