@@ -1,0 +1,137 @@
+body{
+    background-image: url(../resources/images/marmol_background.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.mBrown{
+    background-color: #664638;
+}
+
+.tBrown{
+    background-color: #897759;
+}
+
+nav{
+    height: 70px;
+}
+
+#restaurantLogo{
+    width: 50px;
+    height: 45px;
+    border-radius: 10px;
+    margin-left: 10px;
+}
+
+#navTabs a{
+    transition-delay: 0.1s;
+    transition-duration: 0.4s;
+    transition-property: all;
+}
+
+#navTabs a:hover{
+    background-color: #897759;
+}
+
+#userTabs a{
+    transition-delay: 0.1s;
+    transition-duration: 0.4s;
+    transition-property: all;
+}
+
+#userTabs a:hover{
+    background-color: #897759;
+}
+
+#userLogin{
+    width: 40px;
+    height: 35px;
+}
+
+#shopCart{
+    width: 40px;
+    height: 35px;
+}
+
+.orderImg{
+    width: 480px;
+    height: 350px;
+}
+
+.ordenButton{
+    background-color:#664638 !important;
+    color: white;
+    font-weight: 600;
+    border-radius: 5px;
+    font-size: 19px;
+    border-width: 4px;
+    border-color: #664638;
+    cursor: pointer;
+
+    transition-delay: 0.15s;
+    transition-duration: 0.4s;
+    transition-property: all;   
+}
+
+.ordenButton:hover{
+    border-width: 4px;
+    border-color: #664638;
+    border-radius: 5px;
+    background-color: white !important;
+    color: #664638;
+}
+
+#quantitySelect{
+    width: 80px;
+
+    transition-delay: 0.05s;
+    transition-duration: 0.3s;
+    transition-property: all;   
+}
+
+#quantitySelect:hover{
+    border-color: #664638;
+}
+
+.finishedOrderLogo{
+    width: 35px;
+    height: 100px;
+}
+
+#menuArrow{
+    transition-delay: 0.05s;
+    transition-duration: 0.3s;
+    transition-property: all;  
+}
+
+#menuArrow:hover{
+    transform: scale(1.2);
+}
+
+.menuLogo{
+    width: 190px;
+    border-radius: 5px;
+    border-style: dashed;
+    border-width: 4px;
+    border-color: #664638;
+}
+
+.socialLogo{
+    width: 40px;
+    height: 40px;
+}
+
+.footerLogo{
+    width: 55px;
+    height: 50px;
+    border-radius: 5px;
+}
+
+.creditLogo{
+    width: 65px;
+    height: 40px;
+    background-color: white;
+    border-radius: 10px;
+}
