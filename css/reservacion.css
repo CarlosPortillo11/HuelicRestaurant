@@ -14,8 +14,11 @@ body{
     background-color: #897759;
 }
 
-nav{
-    height: 70px;
+#restaurantLogo{
+    width: 90px;
+    height: 80px;
+    border-radius: 10px;
+    margin-left: 10px;
 }
 .contenedor{
     padding: 2% 15% 5% 15%;
