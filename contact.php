@@ -10,12 +10,23 @@
         <title>Huelic Restaurant</title>
     </head>
     <body>
+        <?php
+            $logUser = "";
+            session_start();
+            error_reporting(0);
+            if($_SESSION['correo'] == ""){
+
+            }
+            else{
+                $logUser = $_SESSION['correo'];
+            }
+        ?>
         <!--header section-->
         <header>
             <nav class="w-full mBrown flex items-center">
                 <div id="logosName" class="flex w-1/3">
                     <a href="index.php">
-                        <img src="resources/images/huelic-white.png" alt="Logo del restaurante" id="restaurantLogo">
+                        <img src="resources/images/huelic-white.png" class="" alt="Logo del restaurante" id="restaurantLogo">
                     </a>
                 </div>
                 <div id="navTabs" class="w-1/3 flex flex-row justify-center">
@@ -25,12 +36,20 @@
                     <a href="contact.php" class="text-white text-xl font-semibold py-5 px-8">Contacto</a>
                 </div>
                 <div id="userTabs" class="w-1/3 h-full flex justify-end items-center">
-                    <a href="Login.php" class="h-full flex items-center px-3">
-                        <img src="resources/images/profile-user.png" alt="Login" id="userLogin">
-                    </a>
-                    <a href="" class="h-full flex items-center px-3" id="cartContainer">
-                        <img src="resources/images/carro.png" alt="Carrito de compras" id="shopCart">
-                        <p class="ml-2 text-white font-semibold">$00.00</p>
+                    <?php
+                        if($logUser == ""){
+                            echo "<a href=\"Login.php\" class=\"h-full flex items-center px-3\">";
+                                echo "<img src=\"resources/images/profile-user.png\" alt=\"Login\" id=\"userLogin\">";
+                            echo "</a>";
+                        }else{
+                            echo "<a href=\"Login.php\" class=\"h-full flex items-center px-3\">";
+                                echo "<p class=\"mx-2 text-white text-lg font-medium\">Bienvenido </p>";
+                                echo "<img src=\"resources/images/profile-user.png\" alt=\"Login\" id=\"userLogin\">";
+                            echo "</a>";
+                        }
+                    ?>
+                    <a href="carrito.php" class="h-full flex items-center px-3" id="cartContainer">
+                        <img class="mx-2" src="resources/images/carro.png" alt="Carrito de compras" id="shopCart">
                     </a>
                 </div>
             </nav>

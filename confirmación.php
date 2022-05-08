@@ -74,9 +74,8 @@
                             echo "</a>";
                         }
                     ?>
-                    <a href="index.php" class="h-full flex items-center px-3" id="cartContainer">
-                        <img src="resources/images/carro.png" alt="Carrito de compras" id="shopCart">
-                        <p class="ml-2 text-white font-semibold">$00.00</p>
+                    <a href="carrito.php" class="h-full flex items-center px-3" id="cartContainer">
+                        <img class="mx-2" src="resources/images/carro.png" alt="Carrito de compras" id="shopCart">
                     </a>
                 </div>
             </nav>
@@ -133,7 +132,7 @@
                                             echo "</div>";
                                         break;
                                         default:
-                                            $sql = "INSERT INTO ordenes (Correo, Platillo, Cantidad, Total) VALUES ('$logUser', '$orderNameCon', $quantityOrderCon, $totalOrder)";
+                                            $sql = "INSERT INTO ordenes (Correo, Platillo, Cantidad, Precio, Total) VALUES ('$logUser', '$orderNameCon', $quantityOrderCon, $orderPriceCon, $totalOrder)";
                                             $query=mysqli_query($conn,$sql);
                                             
                                             if($query){

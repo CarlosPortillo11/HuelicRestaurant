@@ -30,6 +30,7 @@
         else{
             $logUser = $_SESSION['correo'];
         }
+
     ?>
     <div class="contain">
         <header>
@@ -58,9 +59,8 @@
                             echo "</a>";
                         }
                     ?>
-                    <a href="index.php" class="h-full flex items-center px-3" id="cartContainer">
-                        <img src="resources/images/carro.png" alt="Carrito de compras" id="shopCart">
-                        <p class="ml-2 text-white font-semibold">$00.00</p>
+                    <a href="carrito.php" class="h-full flex items-center px-3" id="cartContainer">
+                        <img class="mx-2" src="resources/images/carro.png" alt="Carrito de compras" id="shopCart">
                     </a>
                 </div>
             </nav>
