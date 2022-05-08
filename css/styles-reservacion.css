@@ -63,6 +63,12 @@ nav{
 #navTabs a:hover{
     background-color: #897759;
 }
+.img-reservacion{
+    min-width: 85%;
+    min-height: 85%;
+    padding: auto;
+    margin: auto;
+}
 
 #userTabs a{
     transition-delay: 0.1s;
@@ -74,7 +80,18 @@ nav{
     background-color: #897759;
 }
 
-
+p{
+    font-size:1.2rem;
+}
+.titulos{
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+.titulos2{
+    font-size: 1.5rem;
+    font-weight: 700;
+    padding-right: 3%;
+}
 #userLogin{
     width: 40px;
     height: 35px;
@@ -142,4 +159,5 @@ nav{
         max-width: 800px;
         max-height: 10%;
     }
+
 }

@@ -43,13 +43,13 @@
             <h1 class="text-3xl text-center font font-medium border-b-4 mx-20 border-[#664638]"> Reservaciones </h1>
             <div class="cajas">
                 <div>
-                    <h3 class="text-left text-xl font font-medium">Terraza</h3>
+                    <h3 class="text-left titulos">TERRAZA</h3>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero consequuntur cumque necessitatibus tempora debitis enim quae hic atque, minima perferendis dolores excepturi tempore. Harum, quibusdam velit. Magni quibusdam perspiciatis qui!</p>
                 </div>
-                <div class="contenedor-img-textbox grid grid-cols-2 gap-2 content-center">
-                    <div class="img-reservacion">
-                        <img  src="resources/images/Terraza.jpg" alt="">
-                    </div>
+                <div class="contenedor-img-textbox grid grid-cols-2 gap-2 items-center content-center">
+                 
+                        <img class="items-center content-center img-reservacion" src="resources/Imagenes Reservacion/terraza.png" alt="">
+                   
                     <form action="Reservar.php" method="post">
                         <div class="text-center caja-texboxs">
                             <div class="texbox-labels">
@@ -79,10 +79,10 @@
             </div>
             <div class="cajas">
                 <div>
-                    <h3 class="text-right text-xl font font-medium">Sala</h3>
+                    <h3 class="text-right titulos2">SALA</h3>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero consequuntur cumque necessitatibus tempora debitis enim quae hic atque, minima perferendis dolores excepturi tempore. Harum, quibusdam velit. Magni quibusdam perspiciatis qui!</p>
                 </div>
-                <div class="contenedor-img-textbox grid grid-cols-2 gap-2 content-center">
+                <div class="contenedor-img-textbox grid grid-cols-2 gap-2 items-center content-center">
                     <div class="text-center caja-texboxs">
                         <form action="Reservar.php" method="post">
                             <div class="text-center caja-texboxs">
@@ -110,21 +110,19 @@
                             </div>
                         </form>
                     </div>
-                    <div class="img-reservacion">
-                        <img  src="resources/images/comedor1.jpg" alt="">
-                    </div>
-
+                    
+                        <img  class="items-center content-center img-reservacion" src="resources/Imagenes Reservacion//sala.png" alt="">
                 </div>
             </div>
             <div class="cajas">
                 <div>
-                    <h3 class="text-left text-xl font font-medium">Jardin</h3>
+                    <h3 class="text-left text-left titulos">JARDIN</h3>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero consequuntur cumque necessitatibus tempora debitis enim quae hic atque, minima perferendis dolores excepturi tempore. Harum, quibusdam velit. Magni quibusdam perspiciatis qui!</p>
                 </div>
-                <div class="contenedor-img-textbox grid grid-cols-2 gap-2 content-center">
-                    <div class="img-reservacion">
-                        <img  src="resources/images/comedor-jardin.jpg" alt="">
-                    </div>
+                <div class="contenedor-img-textbox grid grid-cols-2 gap-2 items-center content-center">
+                    
+                        <img class="items-center content-center img-reservacion"  src="resources/Imagenes Reservacion/jardin.png" alt="">
+                   
                     <form action="Reservar.php" method="post">
                         <div class="text-center caja-texboxs">
                             <div class="texbox-labels">
