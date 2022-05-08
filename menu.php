@@ -59,7 +59,7 @@
                             echo "</a>";
                         }
                     ?>
-                    <a href="carrito.php" class="h-full flex items-center px-3" id="cartContainer">
+                    <a href="Carrito.php" class="h-full flex items-center px-3" id="cartContainer">
                         <img class="mx-2" src="resources/images/carro.png" alt="Carrito de compras" id="shopCart">
                     </a>
                 </div>
@@ -67,11 +67,10 @@
         </header>
         <section id="foodNav">
             <nav class="w-auto mx-96 flex mt-1">
-                <a href="" class="w-1/5 text-white text-lg text-center font-semibold flex items-center justify-center">Pizzas</a>
-                <a href="" class="w-1/5 text-white text-lg text-center font-semibold flex items-center justify-center">Ensaladas</a>
-                <a href="" class="w-1/5 text-white text-lg text-center font-semibold flex items-center justify-center">Lassagna</a>
-                <a href="" class="w-1/5 text-white text-lg text-center font-semibold flex items-center justify-center">Steaks</a>
-                <a href="" class="w-1/5 text-white text-lg text-center font-semibold flex items-center justify-center">Postres</a>
+                <a href="" class="w-1/4 text-white text-lg text-center font-semibold flex items-center justify-center">Pizzas</a>
+                <a href="" class="w-1/4 text-white text-lg text-center font-semibold flex items-center justify-center">Ensaladas</a>
+                <a href="" class="w-1/4 text-white text-lg text-center font-semibold flex items-center justify-center">Pastas</a>
+                <a href="" class="w-1/4 text-white text-lg text-center font-semibold flex items-center justify-center">Steaks</a>
             </nav>
         </section>
         <section id="PizzasSection">

@@ -29,7 +29,7 @@
                     <a href="Login.php" class="h-full flex items-center px-3">
                         <img src="resources/images/profile-user.png" alt="Login" id="userLogin">
                     </a>
-                    <a href="carrito.php" class="h-full flex items-center px-3" id="cartContainer">
+                    <a href="Carrito.php" class="h-full flex items-center px-3" id="cartContainer">
                         <img class="mx-2" src="resources/images/carro.png" alt="Carrito de compras" id="shopCart">
                     </a>
                 </div>
