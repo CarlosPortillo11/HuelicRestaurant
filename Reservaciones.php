@@ -29,7 +29,7 @@
                     
             <!-- component -->
             <div class=" w-full mBrown">
-                <div x-data="{ open: false }" class="flex flex-col max-w-screen-xl px-4 mx-auto md:items-center md:justify-between md:flex-row md:px-6 lg:px-8">
+                <div x-data="{ open: false }" class="flex flex-col  px-4 md:items-center md:justify-between md:flex-row md:px-6 lg:px-8">
                     <div  class="p-4 flex flex-row items-center justify-between">
                         <a id="logosName" href="index.php"class="text-lg font-semibold tracking-widest text-gray-900 uppercase rounded-lg dark-mode:text-white focus:outline-none focus:shadow-outline"><img src="resources/images/huelic-white.png"  alt="Logo del restaurante" id="restaurantLogo"></a>
                         <button class="md:hidden rounded-lg focus:outline-none focus:shadow-outline" @click="open = !open">
@@ -47,17 +47,17 @@
                         <div id="userTabs" class="w-1/3 h-full flex justify-end items-center">
                     <?php
                     if ($logUser == "") {
-                        echo "<a href=\"Login.php\" class=\"h-full pt-5\">";
+                        echo "<a href=\"Login.php\" class=\"h-full flex items-center py-5\">";
                         echo "<img src=\"resources/images/profile-user.png\" alt=\"Login\" id=\"userLogin\">";
                         echo "</a>";
                     } else {
-                        echo "<a href=\"Login.php\" class=\"h-full pt-5 \">";
+                        echo "<a href=\"Login.php\" class=\"h-full flex items-center py-5 \">";
                         echo "<p class=\"mx-2 text-white text-lg font-medium\">Bienvenido </p>";
                         echo "<img src=\"resources/images/profile-user.png\" alt=\"Login\" id=\"userLogin\">";
                         echo "</a>";
                     }
                     ?>
-                    <a href="carrito.php" class="h-full pt-4" id="cartContainer"> <img class="mx-6" src="resources/images/carro.png" alt="Carrito de compras" id="shopCart"></a>
+                    <a href="carrito.php" class="h-full py-5 " id="cartContainer"> <img class="mx-6" src="resources/images/carro.png" alt="Carrito de compras" id="shopCart"></a>
                 </div>
                     </nav>
                 </div>
