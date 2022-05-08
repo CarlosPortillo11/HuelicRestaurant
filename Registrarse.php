@@ -2,15 +2,22 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="google-signin-client_id" content="434758102542-tnpohs47mm8k8reu72nri91encsva9dc.apps.googleusercontent.com">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/registrarse.css">
     <link rel="stylesheet" href="css/slick.css">
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <title>Registrarse Huelic Restaurant</title>
 </head>
 <body>
+<?php
+        session_start();
+?>
+
 <div class="contain">
         <header>
             <nav class="w-full mBrown flex items-center">
@@ -70,8 +77,9 @@
             <div class="Derecha w-2/4 h-full ml-28 mr-12">
                     <div class="pt-24 pl-20 w-3/4">
                         <h3 class="font-semibold text-xl inline"> Tambien puedes conectarte con: </h3>
-                        <a href=""><img class="h-auto  mt-20 inline" src="resources/images/iniciargoogle.png" alt=""></a>
-                        <a href=""><img class="h-auto  mt-10 inline" src="resources/images/iniciarfacebook.png" alt=""></a>
+                        <div class="g-signin2" data-onsuccess="onSignIn"></div>
+                        <!--<a data-onsuccess="onSignIn" href="#"><img class="h-auto  mt-20 inline" src="resources/images/iniciargoogle.png" alt=""></a>
+-->
                     </div>
             </div>   
         </section>
@@ -122,6 +130,16 @@
             </div>
         </footer>
 </div>
-    
+<?php
+        if(isset($_SESSION['error']))
+        {
+            echo "<script>swal({
+                text:'Correo o contraseña invalido, por favor vuelva a intentarlo'
+            })</script>";
+            unset($_SESSION['error']);
+        }
+    ?>
+<script src="https://apis.google.com/js/platform.js" async defer></script>
+<script src="./js/auth.js"></script>
 </body>
 </html>

@@ -14,7 +14,8 @@ $coincidencia= mysqli_num_rows($query);  //obtiene numero de coincidencias
         }
     else
         {
-        echo "<script> alert('Usuario o contraseña incorrecto.');window.location= 'Login.php' </script>";
+         $_SESSION['error']= true;
+         header("Location: Login.php");
         }
 
 ?>
