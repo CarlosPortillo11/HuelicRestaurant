@@ -51,7 +51,8 @@ Nota: El archivo "sendmail" ya está configurado con las siguientes credenciales
       confirmación.
 //MANUAL DE USUARIO
 
-[Manual_de_Usuario.pdf](https://github.com/CarlosPortillo11/HuelicRestaurant/files/8357032/Manual_de_Usuario.pdf)
+[Manual de Usuario (1).pdf](https://github.com/CarlosPortillo11/HuelicRestaurant/files/8649092/Manual.de.Usuario.1.pdf)
+
 
 https://www.canva.com/design/DAE8JF-j4f0/82WEdG3mlT8rj0Kd-tazdw/view?utm_content=DAE8JF-j4f0&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
 
