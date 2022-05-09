@@ -13,8 +13,15 @@
 </head>
 <body>
     <?php
-        session_start();
-        $_SESSION['correo'] = "";
+         $logUser = "";
+         session_start();
+         error_reporting(0);
+         if($_SESSION['correo'] == ""){
+ 
+         }
+         else{
+             $logUser = $_SESSION['correo'];
+         }
     ?>
 <div class="contain">
         <header>
@@ -37,9 +44,16 @@
                         <a class="mt-2 text-white text-xl font-semibold py-5 px-8 mt-2" href="contact.php">Contacto</a>
                         <div id="userTabs" class="w-1/3 h-full flex justify-end items-center">
                             <?php
-                            echo "<a href=\"Login.php\" class=\"h-full flex items-center py-5\">";
-                            echo "<img src=\"resources/images/profile-user.png\" alt=\"Login\" id=\"userLogin\">";
-                            echo "</a>";
+                                if($logUser == ""){
+                                    echo "<a href=\"Login.php\" class=\"h-full flex items-center px-3\">";
+                                        echo "<img src=\"resources/images/profile-user.png\" alt=\"Login\" id=\"userLogin\">";
+                                    echo "</a>";
+                                }else{
+                                    echo "<a href=\"Login.php\" class=\"h-full flex items-center px-3\">";
+                                        echo "<p class=\"mx-2 text-white text-lg font-medium\">Bienvenido </p>";
+                                        echo "<img src=\"resources/images/profile-user.png\" alt=\"Login\" id=\"userLogin\">";
+                                    echo "</a>";
+                                }
                             ?>
                             <a href="carrito.php" class="h-full py-5 " id="cartContainer"> <img class="mx-6" src="resources/images/carro.png" alt="Carrito de compras" id="shopCart"></a>
                         </div>

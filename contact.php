@@ -1,28 +1,38 @@
 <!DOCTYPE html>
 <html lang="es">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/contacts.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/Login.css">
-    <link rel="stylesheet" href="css/slick.css">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
-    <title>Huelic Restaurant</title>
-</head>
-
-<body>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/contacts.css">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/Login.css">
+        <link rel="stylesheet" href="css/slick.css">
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+        <title>Huelic Restaurant</title>
+        <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'lightCoffee': '#897759'
+                    }
+                }
+            }
+        }
+        </script>
+        <title>Huelic Restaurant</title>
+    </head>
+    <body>
     <?php
-    $logUser = "";
-    session_start();
-    error_reporting(0);
-    if ($_SESSION['correo'] == "") {
-    } else {
-        $logUser = $_SESSION['correo'];
-    }
+        $logUser = "";
+        session_start();
+        error_reporting(0);
+        if ($_SESSION['correo'] == "") {
+        } else {
+            $logUser = $_SESSION['correo'];
+        }
     ?>
     <!--header section-->
     <header>
