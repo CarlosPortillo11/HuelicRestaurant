@@ -59,6 +59,13 @@
                     <a href="Carrito.php" class="h-full flex items-center px-3" id="cartContainer">
                         <img class="mx-2" src="resources/images/carro.png" alt="Carrito de compras" id="shopCart">
                     </a>
+                    <?php
+                        if(!$logUser==""){
+                            echo"<form class=\"h-full flex items-center px-3\" id=\"logged_out\">";
+                            echo"<input type=\"submit\" value=\"Cerrar sesión\" id=\"log_out\" class=\"mx-2\" style=\"font-weight:bold; color:white; padding:5px;\"/>";
+                            echo"</form>";
+                        }
+                    ?>
                 </div>
             </nav>
         </header>
