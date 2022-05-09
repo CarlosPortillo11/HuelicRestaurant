@@ -10,6 +10,17 @@
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'lightCoffee': '#897759'
+                    }
+                }
+            }
+        }
+    </script>
     <title>Iniciar Sesión</title>
 </head>
 <body>
@@ -25,9 +36,9 @@
          }
     ?>
 <div class="contain">
-        <header>
-          <!-- component -->
-          <div class=" w-full mBrown">
+<header>
+            <!-- component -->
+            <div class=" w-full mBrown">
                 <div x-data="{ open: false }" class="flex flex-col  px-4 md:items-center md:justify-between md:flex-row md:px-6 lg:px-8">
                     <div class="p-4 flex flex-row items-center justify-between">
                         <a id="logosName" href="index.php" class="text-lg font-semibold tracking-widest text-gray-900 uppercase rounded-lg dark-mode:text-white focus:outline-none focus:shadow-outline"><img src="resources/images/huelic-white.png" alt="Logo del restaurante" id="restaurantLogo"></a>
@@ -45,16 +56,16 @@
                         <a class="mt-2 text-white text-xl font-semibold py-5 px-8 mt-2" href="contact.php">Contacto</a>
                         <div id="userTabs" class="w-1/3 h-full flex justify-end items-center">
                             <?php
-                                if($logUser == ""){
-                                    echo "<a href=\"Login.php\" class=\"h-full flex items-center px-3\">";
-                                        echo "<img src=\"resources/images/profile-user.png\" alt=\"Login\" id=\"userLogin\">";
-                                    echo "</a>";
-                                }else{
-                                    echo "<a href=\"Login.php\" class=\"h-full flex items-center px-3\">";
-                                        echo "<p class=\"mx-2 text-white text-lg font-medium\">Bienvenido </p>";
-                                        echo "<img src=\"resources/images/profile-user.png\" alt=\"Login\" id=\"userLogin\">";
-                                    echo "</a>";
-                                }
+                            if ($logUser == "") {
+                                echo "<a href=\"Login.php\" class=\"h-full flex items-center py-5 px-3\">";
+                                echo "<img src=\"resources/images/profile-user.png\" alt=\"Login\" id=\"userLogin\">";
+                                echo "</a>";
+                            } else {
+                                echo "<a href=\"Login.php\" class=\"h-full flex items-center py-5 px-3\">";
+                                echo "<p class=\"mx-2 text-white text-lg font-medium\">Bienvenido </p>";
+                                echo "<img src=\"resources/images/profile-user.png\" alt=\"Login\" id=\"userLogin\">";
+                                echo "</a>";
+                            }
                             ?>
                             <a href="carrito.php" class="h-full py-5 " id="cartContainer"> <img class="mx-6" src="resources/images/carro.png" alt="Carrito de compras" id="shopCart"></a>
                             <?php
@@ -69,8 +80,6 @@
                 </div>
             </div>
             <!-- component -->
-
-        
         </header>
         <section class="min-h-screen flex items-center flex-col justify-center">
             <div class="bg-white mx-auto max-w-500 py-10 px-40 shadow rounded-lg border border-amber-900 border-4">

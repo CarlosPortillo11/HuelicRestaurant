@@ -38,7 +38,7 @@
 
     ?>
     <div class="contain">
-        <header>
+    <header>
             <!-- component -->
             <div class=" w-full mBrown">
                 <div x-data="{ open: false }" class="flex flex-col  px-4 md:items-center md:justify-between md:flex-row md:px-6 lg:px-8">
@@ -59,11 +59,11 @@
                         <div id="userTabs" class="w-1/3 h-full flex justify-end items-center">
                             <?php
                             if ($logUser == "") {
-                                echo "<a href=\"Login.php\" class=\"h-full flex items-center py-5\">";
+                                echo "<a href=\"Login.php\" class=\"h-full flex items-center py-5 px-3\">";
                                 echo "<img src=\"resources/images/profile-user.png\" alt=\"Login\" id=\"userLogin\">";
                                 echo "</a>";
                             } else {
-                                echo "<a href=\"Login.php\" class=\"h-full flex items-center py-5 \">";
+                                echo "<a href=\"Login.php\" class=\"h-full flex items-center py-5 px-3\">";
                                 echo "<p class=\"mx-2 text-white text-lg font-medium\">Bienvenido </p>";
                                 echo "<img src=\"resources/images/profile-user.png\" alt=\"Login\" id=\"userLogin\">";
                                 echo "</a>";

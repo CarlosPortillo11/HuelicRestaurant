@@ -11,6 +11,17 @@
     <link rel="stylesheet" href="css/slick.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'lightCoffee': '#897759'
+                    }
+                }
+            }
+        }
+    </script>
     <title>Reservación</title>
 </head>
 
@@ -25,7 +36,7 @@
     }
     ?>
     <div class="contain">
-        <header>
+    <header>
             <!-- component -->
             <div class=" w-full mBrown">
                 <div x-data="{ open: false }" class="flex flex-col  px-4 md:items-center md:justify-between md:flex-row md:px-6 lg:px-8">
@@ -46,11 +57,11 @@
                         <div id="userTabs" class="w-1/3 h-full flex justify-end items-center">
                             <?php
                             if ($logUser == "") {
-                                echo "<a href=\"Login.php\" class=\"h-full flex items-center py-5\">";
+                                echo "<a href=\"Login.php\" class=\"h-full flex items-center py-5 px-3\">";
                                 echo "<img src=\"resources/images/profile-user.png\" alt=\"Login\" id=\"userLogin\">";
                                 echo "</a>";
                             } else {
-                                echo "<a href=\"Login.php\" class=\"h-full flex items-center py-5 \">";
+                                echo "<a href=\"Login.php\" class=\"h-full flex items-center py-5 px-3\">";
                                 echo "<p class=\"mx-2 text-white text-lg font-medium\">Bienvenido </p>";
                                 echo "<img src=\"resources/images/profile-user.png\" alt=\"Login\" id=\"userLogin\">";
                                 echo "</a>";
@@ -73,9 +84,39 @@
         <section class="contenedor">
             <h1 class="text-3xl text-center font font-medium border-b-4 mx-20 border-[#664638] "> Reservaciones </h1>
             <div class="cajas">
+            <?php
+                    if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+                        include("conexion.php");
+                        $con = conectar();
+
+                        $correo = $_POST['correo'];
+                        $lugar = $_POST['lugar'];
+                        $fecha = $_POST['fecha'];
+                        $destino = $correo;
+
+
+                        $sql = "INSERT INTO reservaciones VALUES('$correo','$lugar','$fecha')";
+                        $query = mysqli_query($con, $sql);
+
+                        $subject = "Reserva";
+                        $headers = 'From: Reserva' . "\r\n" .
+                            'Reply-to: Reserva' . "\r\n" .
+                            'X-Mailer: PHP/' . phpversion();
+
+
+                        $contacto = "Tu reserva ha sido confimada con el correo: " . $correo . "\nEn el lugar: " . $lugar . "\nEn la fecha: " . $fecha . "<br>";
+
+                        if (mail($destino, $subject, $contacto, $headers)) {
+                            echo "<br>  <b> <center> Se le ha enviado un correo de confirmación para su reserva </center> </b> ";
+                            echo "<br>";
+                        } else {
+                            echo "<br>Su reserva no ha sido exitosa";
+                        }
+                    }
+                    ?>
                 <div>
                     <h3 class="text-left titulos">TERRAZA</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero consequuntur cumque necessitatibus tempora debitis enim quae hic atque, minima perferendis dolores excepturi tempore. Harum, quibusdam velit. Magni quibusdam perspiciatis qui!</p>
+                    <p>Si deseas obtener una vista impresionante, la opción ideal para ti es la terraza en la cual tenemos un ambiente clásico y natural, con mesas de madera de Achapo.</p>
                 </div>
                 <div class="contenedor-img-textbox grid grid-cols-2 gap-2 items-center content-center">
 
@@ -107,45 +148,17 @@
                         </div>
 
                     </form>
-                    <?php
-                    if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-                        include("conexion.php");
-                        $con = conectar();
-
-                        $correo = $_POST['correo'];
-                        $lugar = $_POST['lugar'];
-                        $fecha = $_POST['fecha'];
-                        $destino = $correo;
-
-
-                        $sql = "INSERT INTO reservaciones VALUES('$correo','$lugar','$fecha')";
-                        $query = mysqli_query($con, $sql);
-
-                        $subject = "Reserva";
-                        $headers = 'From: Reserva' . "\r\n" .
-                            'Reply-to: Reserva' . "\r\n" .
-                            'X-Mailer: PHP/' . phpversion();
-
-
-                        $contacto = "Tu reserva ha sido confimada con el correo: " . $correo . "\nEn el lugar: " . $lugar . "\nEn la fecha: " . $fecha . "<br>";
-
-                        if (mail($destino, $subject, $contacto, $headers)) {
-                            echo "<br> Se le ha enviado un correo de confirmación para su reserva ";
-                        } else {
-                            echo "<br>Su reserva no ha sido exitosa";
-                        }
-                    }
-                    ?>
+                   
                 </div>
             </div>
             <div class="cajas">
                 <div>
                     <h3 class="text-right titulos2">SALA</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero consequuntur cumque necessitatibus tempora debitis enim quae hic atque, minima perferendis dolores excepturi tempore. Harum, quibusdam velit. Magni quibusdam perspiciatis qui!</p>
+                    <p>Si lo que más deseás es un ambiente más tradicional, tenemos un lugar ideal para ti, la cual es la sala con mesas elegantes, también puedes obtener la oportunidad de reservarlo en eventos importantes como bodas y cumpleaños, entre otros.</p>
                 </div>
                 <div class="contenedor-img-textbox grid grid-cols-2 gap-2 items-center content-center">
                     <div class="text-center caja-texboxs">
-                        <form action="Reservar.php" >
+                        <form method="post" >
                             <div class="text-center caja-texboxs">
                                 <div class="texbox-labels">
                                     <div>
@@ -170,35 +183,7 @@
                                 <input type="submit" value="Reservar" class="ReservarButton text-center inline-block w-full px-8 py-3 leading-none text-white bg-amber-800 rounded hover:bg-amber-900 font-semibold shadow">
                             </div>
                         </form>
-                        <?php
-                        if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-                            include("conexion.php");
-                            $con = conectar();
-
-                            $correo = $_POST['correo'];
-                            $lugar = $_POST['lugar'];
-                            $fecha = $_POST['fecha'];
-                            $destino = $correo;
-
-
-                            $sql = "INSERT INTO reservaciones VALUES('$correo','$lugar','$fecha')";
-                            $query = mysqli_query($con, $sql);
-
-                            $subject = "Reserva";
-                            $headers = 'From: Reserva' . "\r\n" .
-                                'Reply-to: Reserva' . "\r\n" .
-                                'X-Mailer: PHP/' . phpversion();
-
-
-                            $contacto = "Tu reserva ha sido confimada con el correo: " . $correo . "\nEn el lugar: " . $lugar . "\nEn la fecha: " . $fecha . "<br>";
-
-                            if (mail($destino, $subject, $contacto, $headers)) {
-                                echo "<br> Se le ha enviado un correo de confirmación para su reserva ";
-                            } else {
-                                echo "<br>Su reserva no ha sido exitosa";
-                            }
-                        }
-                        ?>
+                        
                     </div>
 
                     <img class="items-center content-center img-reservacion" src="resources/Imagenes Reservacion//sala.png" alt="">
@@ -207,13 +192,13 @@
             <div class="cajas">
                 <div>
                     <h3 class="text-left text-left titulos">JARDIN</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero consequuntur cumque necessitatibus tempora debitis enim quae hic atque, minima perferendis dolores excepturi tempore. Harum, quibusdam velit. Magni quibusdam perspiciatis qui!</p>
+                    <p>Algo importante para muchos es un ambiente fresco, lleno de luz, arboles y sentirte más cerca de la naturaleza, para ello tenemos la opción de comer en el jardín para obtener un espacio similar al camping con la familia.</p>
                 </div>
                 <div class="contenedor-img-textbox grid grid-cols-2 gap-2 items-center content-center">
 
                     <img class="items-center content-center img-reservacion" src="resources/Imagenes Reservacion/jardin.png" alt="">
 
-                    <form action="Reservar.php">
+                    <form method="post">
                         <div class="text-center caja-texboxs">
                             <div class="texbox-labels">
                                 <div>
@@ -223,7 +208,7 @@
                                     <input type="text" name="correo" class=" apperance-none block w-full px-4 py-2 leading-tight text-gray-700 bg-gray-50 focus:bg-white border border-gray-200 focus:border-gray-500 rounded focus:outline-none">
                                 </div>
                             </div>
-                            <div class="texbox-labels">
+                            <div class="texbox-labels"> 
                                 <div>
                                     <h3 class="text-xl font-semibold">Lugar: </h3>
                                 </div>
@@ -237,35 +222,7 @@
                             </div>
                             <input type="submit" value="Reservar" class="ReservarButton text-center inline-block w-full px-8 py-3 leading-none text-white bg-amber-800 rounded hover:bg-amber-900 font-semibold shadow">
                         </div>
-                        <?php
-                        if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-                            include("conexion.php");
-                            $con = conectar();
-
-                            $correo = $_POST['correo'];
-                            $lugar = $_POST['lugar'];
-                            $fecha = $_POST['fecha'];
-                            $destino = $correo;
-
-
-                            $sql = "INSERT INTO reservaciones VALUES('$correo','$lugar','$fecha')";
-                            $query = mysqli_query($con, $sql);
-
-                            $subject = "Reserva";
-                            $headers = 'From: Reserva' . "\r\n" .
-                                'Reply-to: Reserva' . "\r\n" .
-                                'X-Mailer: PHP/' . phpversion();
-
-
-                            $contacto = "Tu reserva ha sido confimada con el correo: " . $correo . "\nEn el lugar: " . $lugar . "\nEn la fecha: " . $fecha . "<br>";
-
-                            if (mail($destino, $subject, $contacto, $headers)) {
-                                echo "<br> Se le ha enviado un correo de confirmación para su reserva ";
-                            } else {
-                                echo "<br>Su reserva no ha sido exitosa";
-                            }
-                        }
-                        ?>
+                        
                     </form>
                 </div>
             </div>
