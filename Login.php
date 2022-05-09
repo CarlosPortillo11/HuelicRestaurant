@@ -14,7 +14,6 @@
 <body>
     <?php
         session_start();
-        $_SESSION['correo'] = "";
     ?>
 <div class="contain">
         <header>
@@ -39,11 +38,11 @@
                             <?php
                             echo "<a href=\"Login.php\" class=\"h-full flex items-center py-5\">";
                             echo "<img src=\"resources/images/profile-user.png\" alt=\"Login\" id=\"userLogin\">";
-                            echo "</a>";
-                            ?>
-                            <a href="carrito.php" class="h-full py-5 " id="cartContainer"> <img class="mx-6" src="resources/images/carro.png" alt="Carrito de compras" id="shopCart"></a>
-                        </div>
-                    </nav>
+                        echo "</a>";
+                    ?>
+                    <a href="Carrito.php" class="h-full flex items-center px-3" id="cartContainer">
+                        <img class="mx-2" src="resources/images/carro.png" alt="Carrito de compras" id="shopCart">
+                    </a>
                 </div>
             </div>
             <!-- component -->
