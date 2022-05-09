@@ -12,14 +12,11 @@ $destino = $correo;
     $query= mysqli_query($con,$sql);   
     
     if($query){
-        Header("Location:index.php");
+        echo "<br> Gracias por por ponerte en contacto con nostros, tu mensaje ha sido enviado con éxito";
         
     }else {
-        echo "<h1>F</h1>";
+        echo "<br>No se pudo enviar el mensaje<br>";
     }
- 
-
-   
   
     $subject = "Reserva";
     $headers = 'From: Reserva' . "\r\n" .

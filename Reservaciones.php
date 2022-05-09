@@ -25,12 +25,12 @@
     }
     ?>
     <div class="contain">
-        <header>          
+        <header>
             <!-- component -->
             <div class=" w-full mBrown">
                 <div x-data="{ open: false }" class="flex flex-col  px-4 md:items-center md:justify-between md:flex-row md:px-6 lg:px-8">
-                    <div  class="p-4 flex flex-row items-center justify-between">
-                        <a id="logosName" href="index.php"class="text-lg font-semibold tracking-widest text-gray-900 uppercase rounded-lg dark-mode:text-white focus:outline-none focus:shadow-outline"><img src="resources/images/huelic-white.png"  alt="Logo del restaurante" id="restaurantLogo"></a>
+                    <div class="p-4 flex flex-row items-center justify-between">
+                        <a id="logosName" href="index.php" class="text-lg font-semibold tracking-widest text-gray-900 uppercase rounded-lg dark-mode:text-white focus:outline-none focus:shadow-outline"><img src="resources/images/huelic-white.png" alt="Logo del restaurante" id="restaurantLogo"></a>
                         <button class="md:hidden rounded-lg focus:outline-none focus:shadow-outline" @click="open = !open">
                             <svg fill="currentColor" viewBox="0 0 20 20" class="w-6 h-6 img_logo">
                                 <path x-show="!open" fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z" clip-rule="evenodd"></path>
@@ -38,33 +38,33 @@
                             </svg>
                         </button>
                     </div>
-                    <nav  id="navTabs" :class="{'flex': open, 'hidden': !open}" class="flex-col flex-grow pb-4 md:pb-0 hidden md:flex md:justify-end md:flex-row">
+                    <nav id="navTabs" :class="{'flex': open, 'hidden': !open}" class="flex-col flex-grow pb-4 md:pb-0 hidden md:flex md:justify-end md:flex-row">
                         <a class="text-white text-xl font-semibold py-5 px-8 mt-2" href="index.php">Home</a>
                         <a class="mt-2 text-white text-xl font-semibold py-5 px-8 mt-2" href="menu.php">Menú</a>
                         <a class="mt-2 text-white text-xl font-semibold py-5 px-8 mt-2" href="Reservaciones.php">Reservación</a>
                         <a class="mt-2 text-white text-xl font-semibold py-5 px-8 mt-2" href="contact.php">Contacto</a>
                         <div id="userTabs" class="w-1/3 h-full flex justify-end items-center">
-                    <?php
-                    if ($logUser == "") {
-                        echo "<a href=\"Login.php\" class=\"h-full flex items-center py-5\">";
-                        echo "<img src=\"resources/images/profile-user.png\" alt=\"Login\" id=\"userLogin\">";
-                        echo "</a>";
-                    } else {
-                        echo "<a href=\"Login.php\" class=\"h-full flex items-center py-5 \">";
-                        echo "<p class=\"mx-2 text-white text-lg font-medium\">Bienvenido </p>";
-                        echo "<img src=\"resources/images/profile-user.png\" alt=\"Login\" id=\"userLogin\">";
-                        echo "</a>";
-                    }
-                    ?>
-                    <a href="carrito.php" class="h-full py-5 " id="cartContainer"> <img class="mx-6" src="resources/images/carro.png" alt="Carrito de compras" id="shopCart"></a>
-                </div>
+                            <?php
+                            if ($logUser == "") {
+                                echo "<a href=\"Login.php\" class=\"h-full flex items-center py-5\">";
+                                echo "<img src=\"resources/images/profile-user.png\" alt=\"Login\" id=\"userLogin\">";
+                                echo "</a>";
+                            } else {
+                                echo "<a href=\"Login.php\" class=\"h-full flex items-center py-5 \">";
+                                echo "<p class=\"mx-2 text-white text-lg font-medium\">Bienvenido </p>";
+                                echo "<img src=\"resources/images/profile-user.png\" alt=\"Login\" id=\"userLogin\">";
+                                echo "</a>";
+                            }
+                            ?>
+                            <a href="carrito.php" class="h-full py-5 " id="cartContainer"> <img class="mx-6" src="resources/images/carro.png" alt="Carrito de compras" id="shopCart"></a>
+                        </div>
                     </nav>
                 </div>
             </div>
             <!-- component -->
         </header>
         <section class="contenedor">
-            <h1 class="text-3xl text-center font font-medium border-b-4 mx-20 border-[#664638]"> Reservaciones </h1>
+            <h1 class="text-3xl text-center font font-medium border-b-4 mx-20 border-[#664638] "> Reservaciones </h1>
             <div class="cajas">
                 <div>
                     <h3 class="text-left titulos">TERRAZA</h3>
@@ -74,7 +74,7 @@
 
                     <img class="items-center content-center img-reservacion" src="resources/Imagenes Reservacion/terraza.png" alt="">
 
-                    <form action="Reservar.php" method="post">
+                    <form method="post">
                         <div class="text-center caja-texboxs">
                             <div class="texbox-labels">
                                 <div>
@@ -98,7 +98,37 @@
                             </div>
                             <input type="submit" value="Reservar" class="ReservarButton text-center inline-block w-full px-8 py-3 leading-none text-white bg-amber-800 rounded hover:bg-amber-900 font-semibold shadow">
                         </div>
+
                     </form>
+                    <?php
+                    if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+                        include("conexion.php");
+                        $con = conectar();
+
+                        $correo = $_POST['correo'];
+                        $lugar = $_POST['lugar'];
+                        $fecha = $_POST['fecha'];
+                        $destino = $correo;
+
+
+                        $sql = "INSERT INTO reservaciones VALUES('$correo','$lugar','$fecha')";
+                        $query = mysqli_query($con, $sql);
+
+                        $subject = "Reserva";
+                        $headers = 'From: Reserva' . "\r\n" .
+                            'Reply-to: Reserva' . "\r\n" .
+                            'X-Mailer: PHP/' . phpversion();
+
+
+                        $contacto = "Tu reserva ha sido confimada con el correo: " . $correo . "\nEn el lugar: " . $lugar . "\nEn la fecha: " . $fecha . "<br>";
+
+                        if (mail($destino, $subject, $contacto, $headers)) {
+                            echo "<br> Se le ha enviado un correo de confirmación para su reserva ";
+                        } else {
+                            echo "<br>Su reserva no ha sido exitosa";
+                        }
+                    }
+                    ?>
                 </div>
             </div>
             <div class="cajas">
@@ -108,7 +138,7 @@
                 </div>
                 <div class="contenedor-img-textbox grid grid-cols-2 gap-2 items-center content-center">
                     <div class="text-center caja-texboxs">
-                        <form action="Reservar.php" method="post">
+                        <form action="Reservar.php" >
                             <div class="text-center caja-texboxs">
                                 <div class="texbox-labels">
                                     <div>
@@ -133,6 +163,35 @@
                                 <input type="submit" value="Reservar" class="ReservarButton text-center inline-block w-full px-8 py-3 leading-none text-white bg-amber-800 rounded hover:bg-amber-900 font-semibold shadow">
                             </div>
                         </form>
+                        <?php
+                        if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+                            include("conexion.php");
+                            $con = conectar();
+
+                            $correo = $_POST['correo'];
+                            $lugar = $_POST['lugar'];
+                            $fecha = $_POST['fecha'];
+                            $destino = $correo;
+
+
+                            $sql = "INSERT INTO reservaciones VALUES('$correo','$lugar','$fecha')";
+                            $query = mysqli_query($con, $sql);
+
+                            $subject = "Reserva";
+                            $headers = 'From: Reserva' . "\r\n" .
+                                'Reply-to: Reserva' . "\r\n" .
+                                'X-Mailer: PHP/' . phpversion();
+
+
+                            $contacto = "Tu reserva ha sido confimada con el correo: " . $correo . "\nEn el lugar: " . $lugar . "\nEn la fecha: " . $fecha . "<br>";
+
+                            if (mail($destino, $subject, $contacto, $headers)) {
+                                echo "<br> Se le ha enviado un correo de confirmación para su reserva ";
+                            } else {
+                                echo "<br>Su reserva no ha sido exitosa";
+                            }
+                        }
+                        ?>
                     </div>
 
                     <img class="items-center content-center img-reservacion" src="resources/Imagenes Reservacion//sala.png" alt="">
@@ -147,7 +206,7 @@
 
                     <img class="items-center content-center img-reservacion" src="resources/Imagenes Reservacion/jardin.png" alt="">
 
-                    <form action="Reservar.php" method="post">
+                    <form action="Reservar.php">
                         <div class="text-center caja-texboxs">
                             <div class="texbox-labels">
                                 <div>
@@ -171,6 +230,35 @@
                             </div>
                             <input type="submit" value="Reservar" class="ReservarButton text-center inline-block w-full px-8 py-3 leading-none text-white bg-amber-800 rounded hover:bg-amber-900 font-semibold shadow">
                         </div>
+                        <?php
+                        if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+                            include("conexion.php");
+                            $con = conectar();
+
+                            $correo = $_POST['correo'];
+                            $lugar = $_POST['lugar'];
+                            $fecha = $_POST['fecha'];
+                            $destino = $correo;
+
+
+                            $sql = "INSERT INTO reservaciones VALUES('$correo','$lugar','$fecha')";
+                            $query = mysqli_query($con, $sql);
+
+                            $subject = "Reserva";
+                            $headers = 'From: Reserva' . "\r\n" .
+                                'Reply-to: Reserva' . "\r\n" .
+                                'X-Mailer: PHP/' . phpversion();
+
+
+                            $contacto = "Tu reserva ha sido confimada con el correo: " . $correo . "\nEn el lugar: " . $lugar . "\nEn la fecha: " . $fecha . "<br>";
+
+                            if (mail($destino, $subject, $contacto, $headers)) {
+                                echo "<br> Se le ha enviado un correo de confirmación para su reserva ";
+                            } else {
+                                echo "<br>Su reserva no ha sido exitosa";
+                            }
+                        }
+                        ?>
                     </form>
                 </div>
             </div>
