@@ -1,4 +1,5 @@
 <?php
+session_start();
 include("conexion.php");
 $con=conectar();
 
@@ -9,10 +10,8 @@ $clave2=$_POST['pass2'];
 
 
 if($_POST["pass"]!=$_POST["pass2"]){
-    echo'<script type="text/javascript"> 
-            alert("Las claves no coinciden");
-            window.location.href="Registrarse.php";
-        </script>';
+    $_SESSION['error']= true;
+    header("Location: Registrarse.php");
 }else{
     $sql="INSERT INTO usuarios (Correo,Clave) VALUES('$correo','$clave')";
     $query=mysqli_query($con,$sql);
@@ -21,7 +20,8 @@ if($_POST["pass"]!=$_POST["pass2"]){
         Header("Location: Login.php");
         
     }else {
-        echo "<h1>Intentelo de nuevo</h1>";
+        $_SESSION['error']= true;
+         header("Location: Registrarse.php");
     }
 }    
 ?>

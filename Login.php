@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/Login.css">
     <link rel="stylesheet" href="css/slick.css">
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
     <title>Iniciar Sesión</title>
@@ -72,12 +73,12 @@
                        <img src="resources\images/huelic-white.png" class="img_logo w-2/4" alt="">
                     </div>
                     <h2 class="Iniciar_S mb-4 text text-center text-3xl font font-medium"> Iniciar Sesión </h2>
-                <form action="iniciarsesion.php" method="POST" >
+                <form action="iniciarsesion.php" method="POST">
                     <div>
                         <h3 class="font-semibold"> Correo Electronico: </h3>
                     </div>
                     <div class="mb-2">
-                        <input type="text" name="correo" class="apperance-none block w-full px-4 py-2 leading-tight text-gray-700 bg-gray-50 focus:bg-white border border-gray-200 focus:border-gray-500 rounded focus:outline-none">
+                        <input  type="text" name="correo" class="apperance-none block w-full px-4 py-2 leading-tight text-gray-700 bg-gray-50 focus:bg-white border border-gray-200 focus:border-gray-500 rounded focus:outline-none">
                     </div>
                     <div>
                         <h3 class="font-semibold"> Contraseña: </h3>
@@ -149,5 +150,15 @@
             </div>
         </footer>
 </div>
+    <?php
+        if(isset($_SESSION['error']))
+        {
+            echo "<script>swal({
+                text:'Correo o contraseña invalido, por favor vuelva a intentarlo'
+            })</script>";
+            unset($_SESSION['error']);
+        }
+
+    ?>
 </body>
 </html>
