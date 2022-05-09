@@ -61,7 +61,7 @@
                     </a>
                     <?php
                         if(!$logUser==""){
-                            echo"<form class=\"h-full flex items-center px-3\" id=\"logged_out\">";
+                            echo"<form class=\"h-full flex items-center px-3\" id=\"logged_out\" method=\"POST\">";
                             echo"<input type=\"submit\" value=\"Cerrar sesión\" id=\"log_out\" class=\"mx-2\" style=\"font-weight:bold; color:white; padding:5px;\"/>";
                             echo"</form>";
                         }

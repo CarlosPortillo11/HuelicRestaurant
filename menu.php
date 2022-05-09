@@ -64,7 +64,7 @@
                     </a>
                     <?php
                         if(!$logUser==""){
-                            echo"<form class=\"h-full flex items-center px-3\" id=\"logged_out\">";
+                            echo"<form class=\"h-full flex items-center px-3\" id=\"logged_out\" method=\"POST\">";
                             echo"<input type=\"submit\" value=\"Cerrar sesión\" id=\"log_out\" class=\"mx-2\" style=\"font-weight:bold; color:white; padding:5px;\"/>";
                             echo"</form>";
                         }
@@ -72,14 +72,6 @@
                 </div>
             </nav>
         </header>
-        <section id="foodNav">
-            <nav class="w-auto mx-96 flex mt-1">
-                <a href="" class="w-1/4 text-white text-lg text-center font-semibold flex items-center justify-center">Pizzas</a>
-                <a href="" class="w-1/4 text-white text-lg text-center font-semibold flex items-center justify-center">Ensaladas</a>
-                <a href="" class="w-1/4 text-white text-lg text-center font-semibold flex items-center justify-center">Pastas</a>
-                <a href="" class="w-1/4 text-white text-lg text-center font-semibold flex items-center justify-center">Steaks</a>
-            </nav>
-        </section>
         <section id="PizzasSection">
             <div class="w-10/12 mt-10 pb-4 mx-auto foodBar">
                 <p class="text-5xl font-semibold text-center text-black">Pizzas</p>
