@@ -46,6 +46,16 @@ nav{
     background-color: #897759;
 }
 
+#log_out{
+    transition-delay: 0.1s;
+    transition-duration: 0.4s;
+    transition-property: all;
+}
+
+#log_out:hover{
+    background-color: #897759;
+}
+
 #userLogin{
     width: 40px;
     height: 35px;

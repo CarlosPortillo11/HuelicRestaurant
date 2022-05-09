@@ -8,6 +8,17 @@
     <link rel="stylesheet" href="css/registrarse.css">
     <link rel="stylesheet" href="css/slick.css">
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'lightCoffee': '#897759'
+                    }
+                }
+            }
+        }
+    </script>
     <title>Registrarse Huelic Restaurant</title>
 </head>
 <body>

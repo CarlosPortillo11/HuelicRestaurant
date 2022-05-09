@@ -7,6 +7,17 @@
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/slick.css">
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'lightCoffee': '#897759'
+                    }
+                }
+            }
+        }
+    </script>
     <title>Huelic Restaurant</title>
 </head>
 <body>
@@ -53,8 +64,8 @@
                     </a>
                     <?php
                         if(!$logUser==""){
-                            echo"<form class=\"h-full flex items-center px-3\" id=\"logged_out\" method=\"POST\">";
-                            echo"<input type=\"submit\" value=\"Cerrar sesión\" id=\"log_out\" class=\"mx-2\" style=\"font-weight:bold; color:white; padding:5px;\"/>";
+                            echo"<form class=\"h-full flex items-center\" id=\"logged_out\" action=\"unlog.php\" method=\"POST\">";
+                            echo"<input type=\"submit\" value=\"Cerrar sesión\" id=\"log_out\" class=\"h-full cursor-pointer hover:bg-lightCoffee\" style=\"font-weight:bold; color:white; padding:12px;\"/>";
                             echo"</form>";
                         }
                     ?>

@@ -11,7 +11,8 @@
             theme: {
                 extend: {
                     colors: {
-                        'coffee': '#664638'
+                        'coffee': '#664638',
+                        'lightCoffee': '#897759'
                     }
                 }
             }
@@ -63,9 +64,9 @@
                         <img class="mx-2" src="resources/images/carro.png" alt="Carrito de compras" id="shopCart">
                     </a>
                     <?php
-                        if(!$logUser==""){
-                            echo"<form class=\"h-full flex items-center px-3\" id=\"logged_out\" method=\"POST\">";
-                            echo"<input type=\"submit\" value=\"Cerrar sesión\" id=\"log_out\" class=\"mx-2\" style=\"font-weight:bold; color:white; padding:5px;\"/>";
+                       if(!$logUser==""){
+                            echo"<form class=\"h-full flex items-center\" id=\"logged_out\" action=\"unlog.php\" method=\"POST\">";
+                            echo"<input type=\"submit\" value=\"Cerrar sesión\" id=\"log_out\" class=\"h-full cursor-pointer hover:bg-lightCoffee\" style=\"font-weight:bold; color:white; padding:12px;\"/>";
                             echo"</form>";
                         }
                     ?>
