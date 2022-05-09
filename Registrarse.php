@@ -8,17 +8,6 @@
     <link rel="stylesheet" href="css/registrarse.css">
     <link rel="stylesheet" href="css/slick.css">
     <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        'lightCoffee': '#897759'
-                    }
-                }
-            }
-        }
-    </script>
     <title>Registrarse Huelic Restaurant</title>
 </head>
 <body>
@@ -40,7 +29,7 @@
                     <a href="Login.php" class="h-full flex items-center px-3">
                         <img src="resources/images/profile-user.png" alt="Login" id="userLogin">
                     </a>
-                    <a href="Carrito.php" class="h-full flex items-center px-3" id="cartContainer">
+                    <a href="carrito.php" class="h-full flex items-center px-3" id="cartContainer">
                         <img class="mx-2" src="resources/images/carro.png" alt="Carrito de compras" id="shopCart">
                     </a>
                 </div>

@@ -11,17 +11,6 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
     <title>Iniciar Sesión</title>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        'lightCoffee': '#897759'
-                    }
-                }
-            }
-        }
-    </script>
     <title>Huelic Restaurant</title>
 </head>
 
@@ -65,19 +54,12 @@
                                 echo "<a href=\"Login.php\" class=\"h-full flex items-center py-5 \">";
                                 echo "<p class=\"mx-2 text-white text-lg font-medium\">Bienvenido </p>";
                                 echo "<img src=\"resources/images/profile-user.png\" alt=\"Login\" id=\"userLogin\">";
-                            echo "</a>";
-                        }
-                    ?>
-                    <a href="Carrito.php" class="h-full flex items-center px-3" id="cartContainer">
-                        <img class="mx-2" src="resources/images/carro.png" alt="Carrito de compras" id="shopCart">
-                    </a>
-                    <?php
-                        if(!$logUser==""){
-                            echo"<form class=\"h-full flex items-center\" id=\"logged_out\" action=\"unlog.php\" method=\"POST\">";
-                            echo"<input type=\"submit\" value=\"Cerrar sesión\" id=\"log_out\" class=\"h-full cursor-pointer hover:bg-lightCoffee\" style=\"font-weight:bold; color:white; padding:12px;\"/>";
-                            echo"</form>";
-                        }
-                    ?>
+                                echo "</a>";
+                            }
+                            ?>
+                            <a href="carrito.php" class="h-full py-5 " id="cartContainer"> <img class="mx-6" src="resources/images/carro.png" alt="Carrito de compras" id="shopCart"></a>
+                        </div>
+                    </nav>
                 </div>
             </div>
             <!-- component -->

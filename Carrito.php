@@ -63,61 +63,15 @@
                             echo "<img src=\"resources/images/profile-user.png\" alt=\"Login\" id=\"userLogin\">";
                             echo "</a>";
                         }
-                    ?>
-                    <a href="Carrito.php" class="h-full flex items-center px-3" id="cartContainer">
-                        <img class="mx-2" src="resources/images/carro.png" alt="Carrito de compras" id="shopCart">
-                    </a>
-                    <?php
-                        if(!$logUser==""){
-                            echo"<form class=\"h-full flex items-center px-3\" id=\"logged_out\" method=\"POST\">";
-                            echo"<input type=\"submit\" value=\"Cerrar sesión\" id=\"log_out\" class=\"mx-2\" style=\"font-weight:bold; color:white; padding:5px;\"/>";
-                            echo"</form>";
-                        }
-                    ?>
-                </div>
-            </nav>
-        </header>
-        <!--Content section-->
-        
-        <main class="content">
-            <section class="cart_confirm">
-                <section class="main_text">
-                    <h1>Carrito de compras</h1>
-                </section>
-                <table class="sub_content">
-                    <tr>
-                        <th>Producto</th>
-                        <th>Cantidad</th>
-                        <th>Precio</th>
-                        <th>Subtotal</th>
-                    </tr>
-                    <?php while($result = mysqli_fetch_array($request)){ ?>
-                        <tr>
-                            <td> <?php echo $result['Platillo'] ?> </td>
-                            <td> <?php echo $result['Cantidad'] ?> </td>
-                            <td> $<?php echo $result['Precio'] ?> </td>
-                            <td> $<?php echo $result['Total'] ?> </td>
-                        </tr>
-                    <?php 
-                        $totalAmount += bcdiv($result['Total'], '1', 2);
-                    } ?>
-                    
-                </table><hr>
-                <section class="purchase">
-                    <form action="https://www.paypal.com/signin" target="_blank">
-                        <section>
-                            <label class="summary">Subtotal:</label>
-                            <label class="summary"> $<?php echo $totalAmount ?> </label>
-                        </section>
-                        <section>
-                            <label class="summary">Total:</label>
-                            <label class="summary"> $<?php echo $totalAmount ?> </label>
-                        </section>
-                        <input type="submit" value="Proceder al pago" id="facturar" class="w-2/3 mx-auto mt-1 button"/>
-                    </form>
-                </section>
-            </section>
-        </main>
+                        ?>
+                        <a href="carrito.php" class="h-full py-5 " id="cartContainer"> <img class="mx-6" src="resources/images/carro.png" alt="Carrito de compras" id="shopCart"></a>
+                    </div>
+                </nav>
+            </div>
+        </div>
+        <!-- component -->
+    </header>
+    <!--Content section-->
 
     <main class="content">
         <section class="cart_confirm">

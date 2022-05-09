@@ -1,31 +1,5 @@
 <!DOCTYPE html>
 <html lang="es">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="css/Contact.css">
-        <link rel="stylesheet" href="css/styles.css">
-        <script src="https://cdn.tailwindcss.com"></script>
-        <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        'lightCoffee': '#897759'
-                    }
-                }
-            }
-        }
-        </script>
-        <title>Huelic Restaurant</title>
-    </head>
-    <body>
-        <?php
-            $logUser = "";
-            session_start();
-            error_reporting(0);
-            if($_SESSION['correo'] == ""){
 
 <head>
     <meta charset="UTF-8">
@@ -64,48 +38,12 @@
                         </svg>
                     </button>
                 </div>
-                <div id="navTabs" class="w-1/3 flex flex-row justify-center">
-                    <a href="index.php" class="text-white text-xl font-semibold py-5 px-8">Home</a>
-                    <a href="menu.php" class="text-white text-xl font-semibold py-5 px-8">Menú</a>
-                    <a href="Reservaciones.php" class="text-white text-xl font-semibold py-5 px-8">Reservación</a>
-                    <a href="contact.php" class="text-white text-xl font-semibold py-5 px-8">Contacto</a>
-                </div>
-                <div id="userTabs" class="w-1/3 h-full flex justify-end items-center">
-                    <?php
-                        if($logUser == ""){
-                            echo "<a href=\"Login.php\" class=\"h-full flex items-center px-3\">";
-                                echo "<img src=\"resources/images/profile-user.png\" alt=\"Login\" id=\"userLogin\">";
-                            echo "</a>";
-                        }else{
-                            echo "<a href=\"Login.php\" class=\"h-full flex items-center px-3\">";
-                                echo "<p class=\"mx-2 text-white text-lg font-medium\">Bienvenido </p>";
-                                echo "<img src=\"resources/images/profile-user.png\" alt=\"Login\" id=\"userLogin\">";
-                            echo "</a>";
-                        }
-                    ?>
-                    <a href="Carrito.php" class="h-full flex items-center px-3" id="cartContainer">
-                        <img class="mx-2" src="resources/images/carro.png" alt="Carrito de compras" id="shopCart">
-                    </a>
-                    <?php
-                        if(!$logUser==""){
-                            echo"<form class=\"h-full flex items-center\" id=\"logged_out\" action=\"unlog.php\" method=\"POST\">";
-                            echo"<input type=\"submit\" value=\"Cerrar sesión\" id=\"log_out\" class=\"h-full cursor-pointer hover:bg-lightCoffee\" style=\"font-weight:bold; color:white; padding:12px;\"/>";
-                            echo"</form>";
-                        }
-                    ?>
-                </div>
-            </nav>
-        </header>
-        <!--Content section-->
-        <section class="main_content">
-            <section class="into-main">
-                <h1 class="contact_text">Contáctanos</h1>
-                <div class="mainContainer_Descp">
-                    <div class="main_text">
-                        <p>Queremos oír lo que tienes que decir.<br><br>
-                        Porque garantizar la satisfacción de nuestros clientes es casi tan importante como entregar felicidad por medio de nuestra comida.</p>
-                    </div>
-                    <div class="form">
+                <nav id="navTabs" :class="{'flex': open, 'hidden': !open}" class="flex-col flex-grow pb-4 md:pb-0 hidden md:flex md:justify-end md:flex-row">
+                    <a class="text-white text-xl font-semibold py-5 px-8 mt-2" href="index.php">Home</a>
+                    <a class="mt-2 text-white text-xl font-semibold py-5 px-8 mt-2" href="menu.php">Menú</a>
+                    <a class="mt-2 text-white text-xl font-semibold py-5 px-8 mt-2" href="Reservaciones.php">Reservación</a>
+                    <a class="mt-2 text-white text-xl font-semibold py-5 px-8 mt-2" href="contact.php">Contacto</a>
+                    <div id="userTabs" class="w-1/3 h-full flex justify-end items-center">
                         <?php
                         if ($logUser == "") {
                             echo "<a href=\"Login.php\" class=\"h-full flex items-center py-5\">";

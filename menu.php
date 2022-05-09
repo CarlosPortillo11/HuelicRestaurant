@@ -16,8 +16,7 @@
             theme: {
                 extend: {
                     colors: {
-                        'coffee': '#664638',
-                        'lightCoffee': '#897759'
+                        'coffee': '#664638'
                     }
                 }
             }
@@ -66,23 +65,25 @@
                                 echo "<a href=\"Login.php\" class=\"h-full flex items-center py-5 \">";
                                 echo "<p class=\"mx-2 text-white text-lg font-medium\">Bienvenido </p>";
                                 echo "<img src=\"resources/images/profile-user.png\" alt=\"Login\" id=\"userLogin\">";
-                            echo "</a>";
-                        }
-                    ?>
-                    <a href="Carrito.php" class="h-full flex items-center px-3" id="cartContainer">
-                        <img class="mx-2" src="resources/images/carro.png" alt="Carrito de compras" id="shopCart">
-                    </a>
-                    <?php
-                       if(!$logUser==""){
-                            echo"<form class=\"h-full flex items-center\" id=\"logged_out\" action=\"unlog.php\" method=\"POST\">";
-                            echo"<input type=\"submit\" value=\"Cerrar sesión\" id=\"log_out\" class=\"h-full cursor-pointer hover:bg-lightCoffee\" style=\"font-weight:bold; color:white; padding:12px;\"/>";
-                            echo"</form>";
-                        }
-                    ?>
+                                echo "</a>";
+                            }
+                            ?>
+                            <a href="carrito.php" class="h-full py-5 " id="cartContainer"> <img class="mx-6" src="resources/images/carro.png" alt="Carrito de compras" id="shopCart"></a>
+                        </div>
+                    </nav>
                 </div>
             </div>
             <!-- component -->
         </header>
+        <section id="foodNav">
+            <nav class="w-auto mx-96 flex mt-1">
+                <a href="" class="w-1/5 text-white text-lg text-center font-semibold flex items-center justify-center">Pizzas</a>
+                <a href="" class="w-1/5 text-white text-lg text-center font-semibold flex items-center justify-center">Ensaladas</a>
+                <a href="" class="w-1/5 text-white text-lg text-center font-semibold flex items-center justify-center">Lassagna</a>
+                <a href="" class="w-1/5 text-white text-lg text-center font-semibold flex items-center justify-center">Steaks</a>
+                <a href="" class="w-1/5 text-white text-lg text-center font-semibold flex items-center justify-center">Postres</a>
+            </nav>
+        </section>
         <section id="PizzasSection">
             <div class="w-10/12 mt-10 pb-4 mx-auto foodBar">
                 <p class="text-5xl font-semibold text-center text-black">Pizzas</p>
