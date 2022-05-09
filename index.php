@@ -10,7 +10,17 @@
     <link rel="stylesheet" href="css/slick.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
-    <title>Iniciar Sesión</title>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'lightCoffee': '#897759'
+                    }
+                }
+            }
+        }
+    </script>
     <title>Huelic Restaurant</title>
 </head>
 
@@ -26,7 +36,6 @@
     ?>
     <div class="contain">
         <header>
-
             <!-- component -->
             <div class=" w-full mBrown">
                 <div x-data="{ open: false }" class="flex flex-col  px-4 md:items-center md:justify-between md:flex-row md:px-6 lg:px-8">
@@ -47,17 +56,24 @@
                         <div id="userTabs" class="w-1/3 h-full flex justify-end items-center">
                             <?php
                             if ($logUser == "") {
-                                echo "<a href=\"Login.php\" class=\"h-full flex items-center py-5\">";
+                                echo "<a href=\"Login.php\" class=\"h-full flex items-center py-5 px-3\">";
                                 echo "<img src=\"resources/images/profile-user.png\" alt=\"Login\" id=\"userLogin\">";
                                 echo "</a>";
                             } else {
-                                echo "<a href=\"Login.php\" class=\"h-full flex items-center py-5 \">";
+                                echo "<a href=\"Login.php\" class=\"h-full flex items-center py-5 px-3\">";
                                 echo "<p class=\"mx-2 text-white text-lg font-medium\">Bienvenido </p>";
                                 echo "<img src=\"resources/images/profile-user.png\" alt=\"Login\" id=\"userLogin\">";
                                 echo "</a>";
                             }
                             ?>
                             <a href="carrito.php" class="h-full py-5 " id="cartContainer"> <img class="mx-6" src="resources/images/carro.png" alt="Carrito de compras" id="shopCart"></a>
+                            <?php
+                                if(!$logUser==""){
+                                    echo"<form class=\"h-full flex items-center\" id=\"logged_out\" action=\"unlog.php\" method=\"POST\">";
+                                    echo"<input type=\"submit\" value=\"Cerrar sesión\" id=\"log_out\" class=\"h-full cursor-pointer hover:bg-lightCoffee\" style=\"font-weight:bold; color:white; padding:12px;\"/>";
+                                    echo"</form>";
+                                }
+                            ?>
                         </div>
                     </nav>
                 </div>

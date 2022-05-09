@@ -16,7 +16,8 @@
             theme: {
                 extend: {
                     colors: {
-                        'coffee': '#664638'
+                        'coffee': '#664638',
+                        'lightCoffee': '#897759'
                     }
                 }
             }
@@ -69,21 +70,19 @@
                             }
                             ?>
                             <a href="carrito.php" class="h-full py-5 " id="cartContainer"> <img class="mx-6" src="resources/images/carro.png" alt="Carrito de compras" id="shopCart"></a>
+                            <?php
+                                if(!$logUser==""){
+                                    echo"<form class=\"h-full flex items-center\" id=\"logged_out\" action=\"unlog.php\" method=\"POST\">";
+                                    echo"<input type=\"submit\" value=\"Cerrar sesión\" id=\"log_out\" class=\"h-full cursor-pointer hover:bg-lightCoffee\" style=\"font-weight:bold; color:white; padding:12px;\"/>";
+                                    echo"</form>";
+                                }
+                            ?>
                         </div>
                     </nav>
                 </div>
             </div>
             <!-- component -->
         </header>
-        <section id="foodNav">
-            <nav class="w-auto mx-96 flex mt-1">
-                <a href="" class="w-1/5 text-white text-lg text-center font-semibold flex items-center justify-center">Pizzas</a>
-                <a href="" class="w-1/5 text-white text-lg text-center font-semibold flex items-center justify-center">Ensaladas</a>
-                <a href="" class="w-1/5 text-white text-lg text-center font-semibold flex items-center justify-center">Lassagna</a>
-                <a href="" class="w-1/5 text-white text-lg text-center font-semibold flex items-center justify-center">Steaks</a>
-                <a href="" class="w-1/5 text-white text-lg text-center font-semibold flex items-center justify-center">Postres</a>
-            </nav>
-        </section>
         <section id="PizzasSection">
             <div class="w-10/12 mt-10 pb-4 mx-auto foodBar">
                 <p class="text-5xl font-semibold text-center text-black">Pizzas</p>
@@ -229,27 +228,27 @@
                 $pastas = array();
 
                 $pastas[0] = new pastaObject();
-                $pastas[0]->pastaName = 'Lasaña con carne';
+                $pastas[0]->pastaName = 'Alffredo con Pollo';
                 $pastas[0]->pastaPrice = bcdiv(3.50, '1', 2);
                 $pastas[0]->pastaCode = "pasta1";
 
                 $pastas[1] = new pastaObject();
-                $pastas[1]->pastaName = 'Lasaña griega';
+                $pastas[1]->pastaName = 'Pollo Parmesano';
                 $pastas[1]->pastaPrice = bcdiv(4.20, '1', 2);
                 $pastas[1]->pastaCode = "pasta2";
 
                 $pastas[2] = new pastaObject();
-                $pastas[2]->pastaName = 'Lasaña de espinaca';
+                $pastas[2]->pastaName = 'Lassagna Clásica';
                 $pastas[2]->pastaPrice = bcdiv(3.00, '1', 2);
                 $pastas[2]->pastaCode = "pasta3";
 
                 $pastas[3] = new pastaObject();
-                $pastas[3]->pastaName = 'Lasaña de aguacate';
+                $pastas[3]->pastaName = 'Tour de Italia';
                 $pastas[3]->pastaPrice = bcdiv(6.00, '1', 2);
                 $pastas[3]->pastaCode = "pasta4";
 
                 $pastas[4] = new pastaObject();
-                $pastas[4]->pastaName = 'Lasaña con tocino';
+                $pastas[4]->pastaName = 'Fettuccine Alfredo';
                 $pastas[4]->pastaPrice = bcdiv(13.00, '1', 2);
                 $pastas[4]->pastaCode = "pasta5";
 

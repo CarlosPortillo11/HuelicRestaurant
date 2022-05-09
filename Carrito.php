@@ -30,6 +30,9 @@
     $query = "SELECT * FROM Ordenes WHERE Correo = '$logUser'";
     $request = mysqli_query($conn, $query);
 
+    $query2 = "SELECT * FROM reservaciones WHERE correo = '$logUser'";
+    $request2 = mysqli_query($conn, $query2);
+
     $totalAmount = 0;
     ?>
     <!--header section-->
@@ -95,7 +98,27 @@
                 <?php
                     $totalAmount += bcdiv($result['Total'], '1', 2);
                 } ?>
-
+            </table>
+            <section class="main_text">
+                <h1>Reservas activas</h1>
+            </section>
+            <table class="sub_content">
+                <tr>
+                    <th>Correo</th>
+                    <th>Zona</th>
+                    <th>Fecha</th>
+                </tr>
+                <?php while ($result2 = mysqli_fetch_array($request2)) { 
+                    $date = date_create($result2['fecha']);
+                    $date2 =  date_format($date, 'd-m-Y');
+                    ?>
+                    <tr>
+                        <td> <?php echo $result2['correo'] ?> </td>
+                        <td> <?php echo $result2['lugar'] ?> </td>
+                        <td> <?php echo $date2 ?> </td>
+                    </tr>
+                <?php
+                } ?>
             </table>
             <hr>
             <section class="purchase">
