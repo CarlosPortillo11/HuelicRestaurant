@@ -127,12 +127,12 @@
                     <th>Fecha</th>
                 </tr>
                 <?php while ($result2 = mysqli_fetch_array($request2)) { 
-                    $date = date_create($result2['fecha']);
+                    $date = date_create($result2['Fecha']);
                     $date2 =  date_format($date, 'd-m-Y');
                     ?>
                     <tr>
-                        <td> <?php echo $result2['correo'] ?> </td>
-                        <td> <?php echo $result2['lugar'] ?> </td>
+                        <td> <?php echo $result2['Correo'] ?> </td>
+                        <td> <?php echo $result2['Lugar'] ?> </td>
                         <td> <?php echo $date2 ?> </td>
                     </tr>
                 <?php
