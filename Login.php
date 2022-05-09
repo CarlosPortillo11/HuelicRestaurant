@@ -12,8 +12,15 @@
 </head>
 <body>
     <?php
-        session_start();
-        $_SESSION['correo'] = "";
+         $logUser = "";
+         session_start();
+         error_reporting(0);
+         if($_SESSION['correo'] == ""){
+ 
+         }
+         else{
+             $logUser = $_SESSION['correo'];
+         }
     ?>
 <div class="contain">
         <header>
@@ -31,9 +38,16 @@
                 </div>
                 <div id="userTabs" class="w-1/3 h-full flex justify-end items-center">
                     <?php
-                        echo "<a href=\"Login.php\" class=\"h-full flex items-center px-3\">";
-                            echo "<img src=\"resources/images/profile-user.png\" alt=\"Login\" id=\"userLogin\">";
-                        echo "</a>";
+                        if($logUser == ""){
+                            echo "<a href=\"Login.php\" class=\"h-full flex items-center px-3\">";
+                                echo "<img src=\"resources/images/profile-user.png\" alt=\"Login\" id=\"userLogin\">";
+                            echo "</a>";
+                        }else{
+                            echo "<a href=\"Login.php\" class=\"h-full flex items-center px-3\">";
+                                echo "<p class=\"mx-2 text-white text-lg font-medium\">Bienvenido </p>";
+                                echo "<img src=\"resources/images/profile-user.png\" alt=\"Login\" id=\"userLogin\">";
+                            echo "</a>";
+                        }
                     ?>
                     <a href="Carrito.php" class="h-full flex items-center px-3" id="cartContainer">
                         <img class="mx-2" src="resources/images/carro.png" alt="Carrito de compras" id="shopCart">
